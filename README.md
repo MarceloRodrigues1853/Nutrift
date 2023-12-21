@@ -51,6 +51,9 @@ Neste projeto, utilizamos as seguintes tecnologias:
    - Uma página para os usuários se cadastrarem na plataforma.
    - Campos para informações de cadastro, como nome, e-mail, senha, etc.
 
+## Segue o link do Site pronto
+Nutrifit - https://projeto-integrador-lilac.vercel.app/cadastro.html?nome=&sobrenome=&email=&senha=&confirmar-senha=&Dia=dia-0&mes=valor-0&ano=valor-0
+
 ## Como Usar
 
 Se desejar testar ou contribuir com o projeto, siga estas etapas:
