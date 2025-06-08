@@ -1,197 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+document.querySelector('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-    <link rel="stylesheet" href="./assets/css/cadastro.css" />
+  const nome = document.querySelector('#nome').value.trim();
+  const sobrenome = document.querySelector('#sobrenome').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const senha = document.querySelector('#senha').value;
 
-    <script src="./assets/js/cadastro.js" defer></script>
+  // Monta data de nascimento a partir dos selects
+  const dia = document.querySelector('select[name="Dia"]').value.replace('dia-', '');
+  const mes = document.querySelector('select[name="mes"]').value.replace('mes-', '');
+  const ano = document.querySelector('select[name="ano"]').value.replace('ano-', '');
+  const data_nascimento = `${ano}-${mes.padStart(2, '0')}-${dia.padStart(2, '0')}`;
 
-    <title>NutriFit - Sua loja de Suplementos</title>
-  </head>
+  // Pega o gênero selecionado
+  const genero = document.querySelector('input[name="genero"]:checked')?.parentElement.innerText.trim();
 
-  <body>
-    <form action="" class="main">
-      <h1>Cadastre-se</h1>
+  const dados = { nome, sobrenome, email, senha, data_nascimento, genero };
 
-      <!-- Input de Nome -->
-      <div class="input-box">
-        <label for="nome">*Nome:</label>
-        <input type="text" id="nome" name="nome" />
-        <p id="nome-helper" class="helper-text">Mensagem de ajuda</p>
-      </div>
+  try {
+    const resposta = await fetch('http://localhost:3000/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dados),
+    });
 
-      <!-- Input de Sobrenome -->
-      <div class="input-box">
-        <label for="sobrenome">*Sobrenome:</label>
-        <input type="text" id="sobrenome" name="sobrenome" />
-        <p id="sobrenome-helper" class="helper-text">Mensagem de ajuda</p>
-      </div>
-
-      <!-- Input de E-mail -->
-      <div class="input-box">
-        <label for="email">*E-mail:</label>
-        <input type="email" id="email" name="email" />
-        <p id="email-helper" class="helper-text">Mensagem de ajuda</p>
-      </div>
-
-      <!-- Inputs de Senha -->
-      <div class="input-box input-senha">
-        <label for="senha">*Senha:</label>
-        <input type="password" id="senha" name="senha" />
-        <p class="helper-text" id="senha-helper">Mensagem de ajuda</p>
-      </div>
-
-      <div class="input-box input-confirmar-senha">
-        <label for="confirmar-senha">*Confirmar Senha:</label>
-        <input type="password" id="confirmar-senha" name="confirmar-senha" />
-        <p class="helper-text" id="confirmar-senha-helper">Mensagem de ajuda</p>
-      </div>
-
-      <div>
-        <div class="data-nascimento">
-          <p>Data de Nascimento</p>
-          <div class="select-data">
-            <div>
-              <p>Dias</p>
-              <select name="Dia">
-                <option value="dia-0" selected></option>
-                <option value="dia-1">1</option>
-                <option value="dia-2">2</option>
-                <option value="dia-3">3</option>
-                <option value="dia-4">4</option>
-                <option value="dia-5">5</option>
-                <option value="dia-6">6</option>
-                <option value="dia-7">7</option>
-                <option value="dia-8">8</option>
-                <option value="dia-9">9</option>
-                <option value="dia-10">10</option>
-                <option value="dia-11">11</option>
-                <option value="dia-12">12</option>
-                <option value="dia-13">13</option>
-                <option value="dia-14">14</option>
-                <option value="dia-15">15</option>
-                <option value="dia-16">16</option>
-                <option value="dia-17">17</option>
-                <option value="dia-18">18</option>
-                <option value="dia-19">19</option>
-                <option value="dia-20">20</option>
-                <option value="dia-21">21</option>
-                <option value="dia-22">22</option>
-                <option value="dia-23">23</option>
-                <option value="dia-24">24</option>
-                <option value="dia-25">25</option>
-                <option value="dia-26">26</option>
-                <option value="dia-27">27</option>
-                <option value="dia-28">28</option>
-                <option value="dia-29">29</option>
-                <option value="dia-30">30</option>
-                <option value="dia-31">31</option>
-              </select>
-            </div>
-            <div>
-              <p>Mês</p>
-              <select name="mes">
-                <option value="valor-0" selected></option>
-                <option value="mes-1">Janeiro</option>
-                <option value="mes-2">Fevereiro</option>
-                <option value="mes-3">Março</option>
-                <option value="mes-4">Abril</option>
-                <option value="mes-5">Maio</option>
-                <option value="mes-6">Junho</option>
-                <option value="mes-7">Julho</option>
-                <option value="mes-8">Agosto</option>
-                <option value="mes-9">Setempro</option>
-                <option value="mes-10">Outubro</option>
-                <option value="mes-11">Novembro</option>
-                <option value="mes-12">Dezembro</option>
-              </select>
-            </div>
-            <div>
-              <p>Ano</p>
-              <select name="ano">
-                <option value="valor-0"></option>
-                <option value="ano-1">2005</option>
-                <option value="ano-2">2004</option>
-                <option value="ano-3">2003</option>
-                <option value="ano-4">2002</option>
-                <option value="ano-5">2001</option>
-                <option value="ano-6">2000</option>
-                <option value="ano-7">1999</option>
-                <option value="ano-8">1998</option>
-                <option value="ano-7">1997</option>
-                <option value="ano-8">1996</option>
-                <option value="ano-9">1994</option>
-                <option value="ano-9">1993</option>
-                <option value="ano-9">1991</option>
-                <option value="ano-9">1990</option>
-                <option value="ano-9">1989</option>
-                <option value="ano-9">1988</option>
-                <option value="ano-9">1987</option>
-                <option value="ano-9">1986</option>
-                <option value="ano-9">1985</option>
-                <option value="ano-9">1984</option>
-                <option value="ano-9">1983</option>
-                <option value="ano-9">1982</option>
-                <option value="ano-9">1981</option>
-                <option value="ano-9">1980</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="genero">
-          <p>Gênero</p>
-          <div class="generos">
-            <label>feminino <input type="radio" name="genero" /></label>
-            <label>Masculino <input type="radio" name="genero" /></label>
-            <label>Outros <input type="radio" name="genero" /></label>
-          </div>
-        </div>
-      </div>
-      <button class="botao"><a href="/login.html">login</a></button>
-      <div class="acessar">
-        <p>Já tem uma conta? <a href="/index2.html">Acessar</a></p>
-      </div>
-    </form>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-contact">
-          <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
-          <p>
-            Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a>
-          </p>
-        </div>
-
-        <div class="footer-shortcuts">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Fale conosco</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-social-icons">
-          <a href="https://www.facebook.com/NutriFitOficial" target="_blank">
-            <img
-              src="img/icon/facebook-logo.png"
-              alt="Facebook"
-              width="32"
-              height="32"
-            />
-          </a>
-          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank">
-            <img
-              src="img/icon/instagram.png"
-              alt="Instagram"
-              width="32"
-              height="32"
-            />
-          </a>
-        </div>
-      </div>
-      <p>© 2023 NutriFit</p>
-    </footer>
-  </body>
-</html>
+    const texto = await resposta.text();
+    alert(texto);
+    if (resposta.ok) window.location.href = 'login.html';
+  } catch (erro) {
+    console.error('Erro ao cadastrar:', erro);
+    alert('Erro ao cadastrar. Tente novamente.');
+  }
+});

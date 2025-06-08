@@ -1,89 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Entrar</title>
-    <link rel="stylesheet" href="./assets/css/login.css" />
-    <script src="./assets/js/login.js" defer></script>
-  </head>
-  <body>
-    
+document.querySelector('#loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-    <main>
-      <div class="main">
-        <form id="loginForm">
-          <h1>Login</h1>
-          <div class="input-box">
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Digite seu e-mail"
-              required
-            />
-            <i class="bx bx-user"></i>
-          </div>
-          <div class="input-box">
-            <label for="senha">Senha</label>
-            <input
-              type="password"
-              id="senha"
-              name="senha"
-              placeholder="Digite sua senha"
-              required
-            />
-            <i class="bx bxs-lock-alt"></i>
-          </div>
-          <div class="lembrar-senha">
-            <a href="/esqueci-a-senha.html">Esqueci a senha</a>
-          </div>
-          <button class="botao"><a href="index2.html">Entrar</a></button>
+  const email = document.querySelector('#email').value.trim();
+  const senha = document.querySelector('#senha').value;
 
-          <div class="registar">
-            <p>Não tem conta?<a href="cadastro.html"> Cadastre-se</a></p>
-          </div>
-        </form>
-      </div>
-    </main>
+  try {
+    const resposta = await fetch('http://localhost:3000/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, senha }),
+    });
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-contact">
-          <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
-          <p>
-            Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a>
-          </p>
-        </div>
-
-        <div class="footer-shortcuts">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Fale conosco</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-social-icons">
-          <a href="https://www.facebook.com/NutriFitOficial" target="_blank">
-            <img
-              src="img/icon/facebook-logo.png"
-              alt="Facebook"
-              width="32"
-              height="32"
-            />
-          </a>
-          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank">
-            <img
-              src="img/icon/instagram.png"
-              alt="Instagram"
-              width="32"
-              height="32"
-            />
-          </a>
-        </div>
-      </div>
-      <p>© 2023 NutriFit</p>
-    </footer>
-  </body>
-</html>
+    const texto = await resposta.text();
+    alert(texto);
+    if (resposta.ok) window.location.href = 'index2.html';
+  } catch (erro) {
+    console.error('Erro no login:', erro);
+    alert('Erro no login. Verifique suas credenciais.');
+  }
+});
