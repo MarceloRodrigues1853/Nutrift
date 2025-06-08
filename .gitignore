@@ -1,0 +1,27 @@
+# Ignora dependências
+node_modules/
+
+# Ignora variáveis de ambiente
+.env
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Pastas de build (se for usar)
+dist/
+build/
+
+# Sistema operacional e editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ignora arquivos de backup/swap
+*.bak
+*.swp
+
+# Banco de dados local ou dump
+*.sql
+*.sqlite
