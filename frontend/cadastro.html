@@ -1,34 +1,85 @@
-document.querySelector('form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - NutriFit</title>
+  <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+<body>
+  <main>
+    <h1>Cadastro</h1>
 
-  const nome = document.querySelector('#nome').value.trim();
-  const sobrenome = document.querySelector('#sobrenome').value.trim();
-  const email = document.querySelector('#email').value.trim();
-  const senha = document.querySelector('#senha').value;
+    <form id="form-cadastro">
+      <div class="input-group">
+        <label for="nome">Nome *</label>
+        <input type="text" name="nome" id="nome" required>
+        <p id="nome-helper" class="helper-text"></p>
+      </div>
 
-  // Monta data de nascimento a partir dos selects
-  const dia = document.querySelector('select[name="Dia"]').value.replace('dia-', '');
-  const mes = document.querySelector('select[name="mes"]').value.replace('mes-', '');
-  const ano = document.querySelector('select[name="ano"]').value.replace('ano-', '');
-  const data_nascimento = `${ano}-${mes.padStart(2, '0')}-${dia.padStart(2, '0')}`;
+      <div class="input-group">
+        <label for="sobrenome">Sobrenome *</label>
+        <input type="text" name="sobrenome" id="sobrenome" required>
+        <p id="sobrenome-helper" class="helper-text"></p>
+      </div>
 
-  // Pega o gênero selecionado
-  const genero = document.querySelector('input[name="genero"]:checked')?.parentElement.innerText.trim();
+      <div class="input-group">
+        <label for="email">E-mail *</label>
+        <input type="email" name="email" id="email" required>
+        <p id="email-helper" class="helper-text"></p>
+      </div>
 
-  const dados = { nome, sobrenome, email, senha, data_nascimento, genero };
+      <div class="input-group">
+        <label for="senha">Senha *</label>
+        <input type="password" name="senha" id="senha" required>
+        <p id="senha-helper" class="helper-text"></p>
+      </div>
 
-  try {
-    const resposta = await fetch('http://localhost:3000/api/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(dados),
-    });
+      <div class="input-group">
+        <label for="confirmar-senha">Confirmar Senha *</label>
+        <input type="password" name="confirmar-senha" id="confirmar-senha" required>
+        <p id="confirmar-senha-helper" class="helper-text"></p>
+      </div>
 
-    const texto = await resposta.text();
-    alert(texto);
-    if (resposta.ok) window.location.href = 'login.html';
-  } catch (erro) {
-    console.error('Erro ao cadastrar:', erro);
-    alert('Erro ao cadastrar. Tente novamente.');
-  }
-});
+      <div class="input-group">
+        <label>Data de nascimento *</label>
+        <select name="Dia" required>
+          <option disabled selected>Dia</option>
+          <!-- Dias de 1 a 31 -->
+          <!-- Pode gerar automaticamente via JS se preferir -->
+          <option value="dia-1">1</option>
+          <option value="dia-2">2</option>
+          <!-- ... até dia 31 -->
+        </select>
+
+        <select name="mes" required>
+          <option disabled selected>Mês</option>
+          <option value="mes-1">1</option>
+          <option value="mes-2">2</option>
+          <!-- ... até mês 12 -->
+        </select>
+
+        <select name="ano" required>
+          <option disabled selected>Ano</option>
+          <option value="ano-2000">2000</option>
+          <option value="ano-1999">1999</option>
+          <!-- ... até ano desejado -->
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Gênero *</label>
+        <label><input type="radio" name="genero" value="Masculino" required> Masculino</label>
+        <label><input type="radio" name="genero" value="Feminino"> Feminino</label>
+        <label><input type="radio" name="genero" value="Outro"> Outro</label>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <p>Já tem conta? <a href="login.html">Entrar</a></p>
+  </main>
+
+  <script src="assets/js/cadastro.js"></script>
+</body>
+</html>
