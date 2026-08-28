@@ -1,222 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NutriFit - Sua loja de Suplementos</title>
+    <title>NutriFit | Suplementos para sua rotina</title>
+    <meta
+      name="description"
+      content="NutriFit: suplementos para ganho de massa, emagrecimento e bem-estar."
+    >
 
-    <link rel="stylesheet" href="./assets/css/style-home.css" />
-
+    <link rel="stylesheet" href="./assets/css/style-home.css" >
     <script src="./assets/js/index.js" defer></script>
   </head>
 
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html" class="logo-link"
-          ><button class="header-button">NutriFit</button></a
-        >
-      </div>
-      
-      <div class="user-options">
-        <a href="#"
-          ><img
-            src="img/icon/usuario.png"
-            alt="Usuário"
-            width="32"
-            height="32"
-            style="margin-right: 10px"
-        /></a>
-        <a
-          href="cadastro.html"
-          style="text-decoration: none; color: white; display: block"
-          >Cadastre-se</a
-        >
-        <a
-          href="./login.html"
-          style="text-decoration: none; color: white; display: block"
-          >Faça login</a
-        >
-        <a href="carrinho.html"
-          ><img
-            src="./img/icon/carrinho.png"
-            alt="Carrinho"
-            width="32"
-            height="32"
-        /></a>
-      </div>
+    <header class="site-header">
+      <a href="index.html" class="brand" aria-label="Página inicial NutriFit">
+        NutriFit
+      </a>
+
+      <nav class="header-actions" aria-label="Menu do usuário">
+        <a href="#" class="icon-link" aria-label="Perfil do usuário">
+          <img src="img/icon/usuario.png" alt="Usuário" width="32" height="32" >
+        </a>
+        <a href="cadastro.html" class="header-link">Cadastre-se</a>
+        <a href="./login.html" class="header-link">Faça login</a>
+        <a href="carrinho.html" class="icon-link" aria-label="Carrinho de compras">
+          <img src="./img/icon/carrinho.png" alt="Carrinho" width="32" height="32" >
+        </a>
+      </nav>
     </header>
 
-    <main>
-      <div class="container">
-        <div class="balloon-box">
-          <div class="balloon">
-            <img
-              src="img/icon/frete-free.png"
-              alt="Ícone de Frete"
-              width="64"
-              height="64"
-            />
-            <h1>Frete Grátis</h1>
-            <p>Acima de 100,00R$</p>
-          </div>
-          <div class="balloon">
-            <img src="img/icon/pix.png" alt="Pix" width="64" height="64" />
-            <h1>5% Off</h1>
-          </div>
-          <div class="balloon">
-            <img
-              src="img/icon/seguro.png"
-              alt="Site Seguro"
-              width="64"
-              height="64"
-            />
-            <h1>Site Seguro</h1>
-          </div>
-          <div class="balloon">
-            <img
-              src="img/icon/contato.png"
-              alt="Dúvidas"
-              width="64"
-              height="64"
-            />
-            <h1>Dúvidas?</h1>
-          </div>
-        </div>
-      </div>
-      <div class="titulo-objetivo">
+    <main class="page-main">
+      <section class="info-bar" aria-label="Benefícios da loja">
+        <article class="info-card">
+          <img src="img/icon/frete-free.png" alt="Frete grátis" width="64" height="64" >
+          <h2>Frete Grátis</h2>
+          <p>Acima de R$ 100,00</p>
+        </article>
+
+        <article class="info-card">
+          <img src="img/icon/pix.png" alt="Desconto no Pix" width="64" height="64" >
+          <h2>5% Off</h2>
+          <p>Pagamento via Pix</p>
+        </article>
+
+        <article class="info-card">
+          <img src="img/icon/seguro.png" alt="Site seguro" width="64" height="64" >
+          <h2>Site Seguro</h2>
+          <p>Compra protegida</p>
+        </article>
+
+        <article class="info-card">
+          <img src="img/icon/contato.png" alt="Atendimento" width="64" height="64" >
+          <h2>Dúvidas?</h2>
+          <p>Fale com a gente</p>
+        </article>
+      </section>
+
+      <section class="section-heading">
         <h2>Qual é o seu objetivo?</h2>
-      </div>
-      <div class="container-objetivo">
-        <div class="button-massa-muscular">
-          <div class="div-massa">
+      </section>
+
+      <section class="goal-grid" aria-label="Objetivos dos clientes">
+        <article class="goal-card">
+          <div class="goal-icon">
             <img
               src="./img/icon/biceps-of-a-man-svgrepo-com.png"
-              alt="Massa Muscular"
-              class="img-massa"
-            />
+              alt="Massa muscular"
+            >
           </div>
           <h3><a href="./ganhoMuscular.html">Massa muscular</a></h3>
-        </div>
-        <div class="button-emagrecimento">
-          <div class="div-emagrecimento">
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-icon">
             <img
               src="./img/icon/measuring-tape-svgrepo-com.svg"
               alt="Emagrecimento"
-              class="img-emagrecimento"
-            />
+            >
           </div>
           <h3><a href="./emagrecimento.html">Emagrecimento</a></h3>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <div class="container-produto">
-        <div class="img-prod">
+      <section class="product-showcase" aria-label="Produto em destaque">
+        <div class="product-image">
           <img
             src="./img/produtos/whey-gold-standard.png"
-            width="320px"
-            height="320px"
-            alt="Produto"
-          />
+            alt="Whey Gold Standard 1kg"
+          >
         </div>
-        <div class="dados-prod">
-          <h3 class="cta-prod">
-            O WHEY COM MELHOR CUSTO BENEFÍCIO DO MERCADO.
-          </h3>
-          <h4 class="titulo-prod">WHEY GOLD STANDARD 1KG</h4>
-          <ul class="beneficios-prod">
+
+        <div class="product-content">
+          <p class="product-tag">O whey com melhor custo-benefício do mercado.</p>
+          <h3>WHEY GOLD STANDARD 1KG</h3>
+
+          <ul class="product-benefits">
             <li>Promoção por tempo limitado</li>
-            <li>Alta concentração de proteina</li>
+            <li>Alta concentração de proteína</li>
             <li>Ajuda na hipertrofia</li>
           </ul>
 
-          <div class="container-preco">
-            <b>De <label class="desconto">R$199,90</label></b>
-            <b><label class="preco-produto">Por R$99,90</label></b>
+          <div class="product-price">
+            <span class="original-price">De R$ 199,90</span>
+            <strong>Por R$ 99,90</strong>
           </div>
-          <a href="./ganhoMuscular.html" class="botao-saiba-mais">Saiba mais</a>
-        </div>
-      </div>
-      <div class="titulo-avaliacoes">
-        <h2>Vejam o que falam de nossa loja</h2>
-      </div>
-      <section class="cards">
-        <div class="card">
-          <p>Recomendo.</p>
-          <h3>Marcelo H.</h3>
 
-          <div class="stars">
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-          </div>
-        </div>
-
-        <div class="card">
-          <p>Site excelente.</p>
-          <h3>Diego M.</h3>
-
-          <div class="stars">
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-          </div>
-        </div>
-
-        <div class="card">
-          <p>Ótimo.</p>
-          <h3>João L.</h3>
-          <div class="stars">
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-            <img class="star" src="img/icon/star-svgrepo-com.svg" alt="" />
-          </div>
+          <a href="./ganhoMuscular.html" class="cta-button">Saiba mais</a>
         </div>
       </section>
-      <div class="titulo-sobre-nos">
-        <h2>Sobre nós</h2>
-      </div>
-      <div class="container-sobre-nos">
-        <div class="img-logo">
-          <img
-            src="img/produtos/logo_ficticio.png"
-            alt="Logo"
-            height="300px"
-            width="300px"
-          />
-        </div>
 
-        <div class="container-texto-sobre-nos">
-          <h3>Nossa missão</h3>
-          <div class="texto">
-            Somos uma empresa fictícia que acredita que a saúde é a maior
-            riqueza que podemos possuir na vida.
-            <p>
-              Com um compromisso inabalável com a qualidade e a eficácia,
-              estamos aqui para ajudá-lo a atingir os seus objetivos de saúde e
-              fitness de forma segura e eficiente.
-            </p>
+      <section class="section-heading reviews-heading">
+        <h2>Vejam o que falam de nossa loja</h2>
+      </section>
+
+      <section class="reviews" aria-label="Avaliações dos clientes">
+        <article class="review-card">
+          <p>Recomendo.</p>
+          <h3>Marcelo H.</h3>
+          <div class="stars" aria-label="5 estrelas">
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
           </div>
-        </div>
-      </div>
-    </main>
+        </article>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-contact">
-          <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+        <article class="review-card">
+          <p>Site excelente.</p>
+          <h3>Diego M.</h3>
+          <div class="stars" aria-label="5 estrelas">
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+          </div>
+        </article>
+
+        <article class="review-card">
+          <p>Ótimo.</p>
+          <h3>João L.</h3>
+          <div class="stars" aria-label="5 estrelas">
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+            <img src="img/icon/star-svgrepo-com.svg" alt="Estrela" >
+          </div>
+        </article>
+      </section>
+
+      <section class="section-heading about-heading">
+        <h2>Sobre nós</h2>
+      </section>
+
+      <section class="about-section" aria-label="Quem somos">
+        <div class="about-image">
+          <img src="img/produtos/logo_ficticio.png" alt="Logo da NutriFit" >
+        </div>
+
+        <div class="about-content">
+          <h3>Nossa missão</h3>
           <p>
-            Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a>
+            Somos uma empresa fictícia que acredita que a saúde é a maior riqueza que
+            podemos possuir na vida.
+          </p>
+          <p>
+            Com um compromisso inabalável com a qualidade e a eficácia, estamos aqui para
+            ajudá-lo a atingir os seus objetivos de saúde e fitness de forma segura e eficiente.
           </p>
         </div>
+      </section>
+    </main>
 
-        <div class="footer-shortcuts">
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-contact">
+          <p>Atendimento: <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+          <p>Email: <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a></p>
+        </div>
+
+        <div class="footer-links">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="contato.html">Fale conosco</a></li>
@@ -224,23 +191,16 @@
         </div>
 
         <div class="footer-social-icons">
-          <a href="https://www.facebook.com/NutriFitOficial" target="_blank"
-            ><img
-              src="img/icon/facebook-logo.png"
-              alt="Facebook"
-              width="32"
-              height="32"
-          /></a>
-          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank"
-            ><img
-              src="img/icon/instagram.png"
-              alt="Instagram"
-              width="32"
-              height="32"
-          /></a>
+          <a href="https://www.facebook.com/NutriFitOficial" target="_blank" rel="noreferrer">
+            <img src="img/icon/facebook-logo.png" alt="Facebook" width="32" height="32" >
+          </a>
+          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank" rel="noreferrer">
+            <img src="img/icon/instagram.png" alt="Instagram" width="32" height="32" >
+          </a>
         </div>
       </div>
-      <p>© 2023 NutriFit</p>
+
+      <p class="copyright">© <span id="current-year"></span> NutriFit</p>
     </footer>
   </body>
 </html>
