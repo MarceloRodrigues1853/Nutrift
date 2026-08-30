@@ -1,3 +1,7 @@
-// Durante o desenvolvimento, usa a API local. Quando o backend for publicado,
-// altere somente este endereço para a URL pública (sem barra no final).
-window.NUTRIFT_API_URL = "http://localhost:3000";
+const hostLocal = ["localhost", "127.0.0.1"].includes(
+  window.location.hostname
+);
+
+window.NUTRIFT_API_URL = hostLocal
+  ? "http://localhost:3000"
+  : "https://nutrift-api.onrender.com";
