@@ -30,14 +30,21 @@ Em hospedagem gratuita, a primeira chamada à API pode demorar alguns segundos e
 <details>
   <summary>Ver telas de autenticação</summary>
 
-  ### Login
+### Login
 
-  ![Tela de login do NutriFit](docs/screenshots/login.png)
+![Tela de login do NutriFit](docs/screenshots/login.png)
 
-  ### Cadastro
+### Cadastro
 
-  ![Tela de cadastro do NutriFit](docs/screenshots/cadastro.png)
+![Tela de cadastro do NutriFit](docs/screenshots/cadastro.png)
+
 </details>
+
+### Área logada e catálogo
+
+![Home com avatar e carrinho](docs/screenshots/logged-home.png)
+
+![Página de ganho de massa](docs/screenshots/category.png)
 
 ## Arquitetura
 

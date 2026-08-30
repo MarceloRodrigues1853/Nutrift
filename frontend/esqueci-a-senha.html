@@ -1,81 +1,98 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recuperar Senha</title>
-
-    <link rel="stylesheet" href="./assets/css/login.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Recuperar senha | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/recuperar-senha.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <button class="header-button">NutriFit</button>
-        </a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Barra de pesquisa" />
-      </div>
-      <div class="user-options">
-        <a href="#">
-          <img src="assets/img/icon/usuario.png" alt="Usuário" width="32" height="32" />
-        </a>
-        <a href="cadastro.html" class="user-link">Cadastre-se</a>
-        <a href="#" class="user-link">Faça login</a>
-        <a href="#">
-          <img src="assets/img/icon/carrinho.png" alt="Carrinho" width="32" height="32" />
-        </a>
-      </div>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="index2.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
+        >
+        <div class="nav-links">
+          <a class="nav-link" href="index2.html">Início</a
+          ><a class="nav-account" href="index2.html"
+            ><span class="avatar material-symbols-rounded">person</span
+            ><span class="nav-user-label">Minha conta</span></a
+          ><a class="nav-cart" href="carrinho.html"
+            ><span class="material-symbols-rounded">shopping_cart</span
+            ><span class="cart-count" id="carrinho-quantidade">0</span></a
+          >
+        </div>
+      </nav>
     </header>
-
     <main>
-      <div class="main">
-        <form action="">
-          <h1>Recuperar Senha</h1>
-          <div class="input-box">
-            <input type="email" name="email" placeholder="E-Mail: " required />
-            <i class="bx bx-user"></i>
+      <section class="page-hero">
+        <div class="page-shell">
+          <div>
+            <span class="badge">Acesso</span>
+            <h1>Recupere sua senha.</h1>
+            <p>Informe e confirme o e-mail usado no cadastro.</p>
           </div>
-          <div class="input-box">
-            <input
-              type="email"
-              name="confirmar-email"
-              placeholder="Confirmar E-mail::"
-              required
-            />
-            <i class="bx bxs-lock-alt"></i>
-          </div>
-          <button type="submit" class="botao">Avançar</button>
-        </form>
-      </div>
+          <span class="hero-icon material-symbols-rounded">key</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="page-shell" style="max-width: 680px">
+          <form id="recovery-form" class="panel form-stack">
+            <h2 class="section-title">Confirmar e-mail</h2>
+            <div class="notice">
+              <span class="material-symbols-rounded">info</span>A recuperação
+              ainda é demonstrativa e não envia mensagens reais.
+            </div>
+            <div class="field">
+              <label for="recovery-email">E-mail</label
+              ><input id="recovery-email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="recovery-confirm">Confirmar e-mail</label
+              ><input
+                id="recovery-confirm"
+                name="confirmar-email"
+                type="email"
+                required
+              />
+            </div>
+            <button class="button" type="submit">Continuar</button
+            ><a class="text-link" href="login.html">Voltar para o login</a>
+          </form>
+        </div>
+      </section>
     </main>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-contact">
-          <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
-          <p>Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a></p>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h2>NutriFit</h2>
+          <p>Projeto acadêmico de e-commerce.</p>
         </div>
-
-        <div class="footer-shortcuts">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Fale conosco</a></li>
-          </ul>
+        <div>
+          <h3>Navegação</h3>
+          <div class="footer-links">
+            <a href="index2.html">Início</a><a href="contato.html">Contato</a>
+          </div>
         </div>
-
-        <div class="footer-social-icons">
-          <a href="https://www.facebook.com/NutriFitOficial" target="_blank">
-            <img src="assets/img/icon/facebook-logo.png" alt="Facebook" width="32" height="32" />
-          </a>
-          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank">
-            <img src="assets/img/icon/instagram.png" alt="Instagram" width="32" height="32" />
-          </a>
+        <div>
+          <h3>Conta</h3>
+          <div class="footer-links">
+            <a href="carrinho.html">Carrinho</a><a href="login.html">Sair</a>
+          </div>
         </div>
       </div>
-      <p>© <span data-current-year></span> NutriFit</p>
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
+      </div>
     </footer>
-    <script src="assets/js/site.js"></script>
   </body>
 </html>

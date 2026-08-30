@@ -1,149 +1,154 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pagamento</title>
-  <link rel="stylesheet" href="./assets/css/pagamento.css" />
-  <script src="./assets/js/pagamento.js" defer></script>
-</head>
-<body>
-  <header>
-    <h1>Página de Pagamento</h1>
-  </header>
-
-  <main>
-    <section id="detalhes-pagamento">
-      <h2>Detalhes do Pagamento</h2>
-      <!-- Adicione aqui os campos para detalhes do pagamento, como cartão de crédito, endereço, etc. -->
-      <label for="numero-cartao">Número do Cartão:</label>
-      <input
-        type="text"
-        id="numero-cartao"
-        name="numero-cartao"
-        placeholder="**** **** **** ****"
-        required
-      />
-
-      <label for="nome-titular">Nome do Titular:</label>
-      <input type="text" id="nome-titular" name="nome-titular" required />
-
-      <label for="data-expiracao">Data de Expiração:</label>
-      <input
-        type="text"
-        id="data-expiracao"
-        name="data-expiracao"
-        placeholder="MM/AA"
-        required
-      />
-
-      <label for="cvv">CVV:</label>
-      <input type="text" id="cvv" name="cvv" placeholder="***" required />
-    </section>
-
-    <section id="detalhes-envio">
-      <h2>Detalhes de Envio</h2>
-      <!-- Adicione aqui os campos para detalhes de envio, como endereço, cidade, etc. -->
-  <label for="endereco">Endereço:</label>
-  <input type="text" id="endereco" name="endereco" required />
-
-  <label for="cidade">Cidade:</label>
-  <input type="text" id="cidade" name="cidade" required />
-
-  <label for="cp">Código Postal (CP):</label>
-  <input type="text" id="cp" name="cp" required />
-
-  <label for="estado">Estado:</label>
-  <input type="text" id="estado" name="estado" required />
-
-  <!-- Adicione mais campos conforme necessário -->
-
-    </section>
-
-    <section id="resumo-pedido">
-      <h2>Resumo do Pedido</h2>
-      <!-- Adicione aqui um resumo do pedido, mostrando os itens selecionados, quantidades e total a pagar -->
-      <div class="item-pedido">
-        <span>Produto 1</span>
-        <span>Quantidade: 2</span>
-        <span>Total: R$ 50.00</span>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pagamento | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/pagamento.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="index2.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
+        >
+        <div class="nav-links">
+          <a class="nav-link" href="index2.html">Início</a
+          ><a class="nav-account" href="index2.html"
+            ><span class="avatar material-symbols-rounded">person</span
+            ><span class="nav-user-label">Minha conta</span></a
+          ><a class="nav-cart" href="carrinho.html"
+            ><span class="material-symbols-rounded">shopping_cart</span
+            ><span class="cart-count" id="carrinho-quantidade">0</span></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="page-shell">
+          <div>
+            <span class="badge">Checkout demonstrativo</span>
+            <h1>Finalize seu pedido.</h1>
+            <p>
+              Esta tela não realiza cobranças reais. Não informe dados
+              verdadeiros de cartão.
+            </p>
+          </div>
+          <span class="hero-icon material-symbols-rounded">credit_card</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="page-shell checkout-layout">
+          <form id="payment-form" class="panel form-stack">
+            <h2 class="section-title">Dados do pagamento</h2>
+            <div class="notice">
+              <span class="material-symbols-rounded">warning</span>Use somente
+              dados fictícios neste projeto acadêmico.
+            </div>
+            <div class="field">
+              <label for="numero-cartao">Número do cartão</label
+              ><input
+                id="numero-cartao"
+                inputmode="numeric"
+                placeholder="0000 0000 0000 0000"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="nome-titular">Nome do titular</label
+              ><input id="nome-titular" autocomplete="off" required />
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="data-expiracao">Validade</label
+                ><input id="data-expiracao" placeholder="MM/AA" required />
+              </div>
+              <div class="field">
+                <label for="cvv">CVV</label
+                ><input
+                  id="cvv"
+                  inputmode="numeric"
+                  placeholder="000"
+                  required
+                />
+              </div>
+            </div>
+            <h3>Endereço de entrega</h3>
+            <div class="field">
+              <label for="endereco">Endereço</label
+              ><input id="endereco" required />
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="cidade">Cidade</label><input id="cidade" required />
+              </div>
+              <div class="field">
+                <label for="estado">Estado</label><input id="estado" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="cp">CEP</label><input id="cp" required />
+            </div>
+          </form>
+          <aside class="panel summary">
+            <h2>Resumo</h2>
+            <div class="summary-row">
+              <span>Pedido demonstrativo</span
+              ><strong id="payment-total">R$ 0,00</strong>
+            </div>
+            <h3>Método</h3>
+            <div class="payment-methods">
+              <label class="payment-option"
+                ><input type="radio" name="metodo-pagamento" checked /> Cartão
+                de crédito</label
+              ><label class="payment-option"
+                ><input type="radio" name="metodo-pagamento" /> Pix</label
+              >
+            </div>
+            <button
+              class="button"
+              id="botao-pagar"
+              type="submit"
+              form="payment-form"
+            >
+              Simular pagamento
+            </button>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h2>NutriFit</h2>
+          <p>Projeto acadêmico de e-commerce.</p>
+        </div>
+        <div>
+          <h3>Navegação</h3>
+          <div class="footer-links">
+            <a href="index2.html">Início</a><a href="contato.html">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h3>Conta</h3>
+          <div class="footer-links">
+            <a href="carrinho.html">Carrinho</a><a href="login.html">Sair</a>
+          </div>
+        </div>
       </div>
-
-      <div class="item-pedido">
-        <span>Produto 2</span>
-        <span>Quantidade: 1</span>
-        <span>Total: R$ 30.00</span>
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
       </div>
-
-      <div id="total-pagar">
-        <span>Total a Pagar: R$ 80.00</span>
-      </div>
-
-      <button id="botao-pagar">Pagar</button>
-    </section>
-
-    <section id="metodos-pagamento">
-      <h2>Métodos de Pagamento</h2>
-      <!-- Adicione aqui opções de métodos de pagamento, como cartão de crédito, boleto, etc. -->
-      <label for="metodo-cartao">
-        <input
-          type="radio"
-          id="metodo-cartao"
-          name="metodo-pagamento"
-          checked
-        />
-        Cartão de Crédito
-      </label>
-
-      <label for="metodo-boleto">
-        <input type="radio" id="metodo-boleto" name="metodo-pagamento" />
-        Boleto Bancário
-      </label>
-
-      <label for="metodo-pix">
-        <input type="radio" id="metodo-pix" name="metodo-pix" />
-        Pix
-      </label>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-contact">
-        <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
-        <p>
-          Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a>
-        </p>
-      </div>
-
-      <div class="footer-shortcuts">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="contato.html">Fale conosco</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-social-icons">
-        <a href="https://www.facebook.com/NutriFitOficial" target="_blank">
-          <img
-            src="assets/img/icon/facebook-logo.png"
-            alt="Facebook"
-            width="32"
-            height="32"
-          />
-        </a>
-        <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank">
-          <img
-            src="assets/img/icon/instagram.png"
-            alt="Instagram"
-            width="32"
-            height="32"
-          />
-        </a>
-      </div>
-    </div>
-      <p>© <span data-current-year></span> NutriFit</p>
-  </footer>
-    <script src="assets/js/site.js"></script>
+    </footer>
   </body>
 </html>

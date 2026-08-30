@@ -1,127 +1,150 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NutriFit - Sua loja de Suplementos</title>
-    <link rel="stylesheet" href="./assets/css/contato.css" />
-
-    <script src="./assets/js/contato.js" defer></script>
-</head>
-
-<body>
-
-    <header>
-        <div class="logo">
-            <a href="index.html" class="logo-link">
-                <button class="header-button">NutriFit</button>
-            </a>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contato | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/contato.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="index2.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
+        >
+        <div class="nav-links">
+          <a class="nav-link" href="index2.html">Início</a
+          ><a class="nav-account" href="index2.html"
+            ><span class="avatar material-symbols-rounded">person</span
+            ><span class="nav-user-label">Minha conta</span></a
+          ><a class="nav-cart" href="carrinho.html"
+            ><span class="material-symbols-rounded">shopping_cart</span
+            ><span class="cart-count" id="carrinho-quantidade">0</span></a
+          >
         </div>
-
-        <div class="user-options">
-            <a href="#">
-                <img src="assets/img/icon/usuario.png" alt="Usuário" width="32" height="32" />
-            </a>
-            <a href="cadastro.html" class="user-link">Cadastre-se</a>
-            <a href="login.html" class="user-link">Faça login</a>
-            <a href="carrinho.html">
-                <img src="assets/img/icon/carrinho.png" alt="Carrinho" width="32" height="32" />
-            </a>
-        </div>
+      </nav>
     </header>
-
     <main>
-        <div class="container">
-            <div class="balloon-box">
-                <div class="balloon">
-                    <img src="assets/img/icon/frete-free.png" alt="Ícone de Frete" width="64" height="64">
-                    <h1>Frete Grátis</h1>
-                    <p>Acima de 100,00R$</p>
-                </div>
-                <div class="balloon">
-                    <img src="assets/img/icon/pix.png" alt="Pix" width="64" height="64">
-                    <h1>5% Off</h1>
-                </div>
-                <div class="balloon">
-                    <img src="assets/img/icon/seguro.png" alt="Site Seguro" width="64" height="64">
-                    <h1>Site Seguro</h1>
-                </div>
-                <div class="balloon">
-                    <img src="assets/img/icon/contato.png" alt="Dúvidas" width="64" height="64">
-                    <h1>Dúvidas?</h1>
-                </div>
-            </div>
+      <section class="page-hero">
+        <div class="page-shell">
+          <div>
+            <span class="badge">Atendimento</span>
+            <h1>Como podemos ajudar?</h1>
+            <p>
+              Envie sua mensagem pelo formulário. O envio é apenas uma simulação
+              acadêmica.
+            </p>
+          </div>
+          <span class="hero-icon material-symbols-rounded">support_agent</span>
         </div>
-
-        <h1>COMO PODEMOS TE AJUDAR?</h1>
-
-        <section id="opcoes">
-            <!-- Seção Telefone -->
-            <div class="help-options">
-                <img src="assets/img/icon/telefone.png" alt="Ícone telefone" />
-                <h2>TELEFONE</h2>
-                <p>De seg a sex das 9hs às 18hs</p>
-                <p>(99) 99999-9999</p>
-            </div>
-
-            <!-- Seção Revenda -->
-            <div>
-                <img src="assets/img/icon/revenda.png" alt="Ícone revenda" />
-                <h2>REVENDA</h2>
-                <p>Tem uma loja e quer revender nossos produtos?</p>
-            </div>
-
-            <!-- Seção Fornecimento -->
-            <div>
-                <img src="assets/img/icon/forneca.png" alt="Ícone fornecer" />
-                <h2>FORNEÇA</h2>
-                <p>Forneça produtos para nós</p>
-            </div>
-        </section>
-
-        <section id="contato" class="contact-section">
-            <h2>Fale conosco!</h2>
-            <p>Olá! Preencha o formulário e retornaremos seu email!</p>
-
-            <form>
-                <input type="text" name="nome" placeholder="Nome Completo" />
-                <input type="text" name="cpf" placeholder="CPF" />
-                <input type="email" name="email" placeholder="E-mail" />
-                <input type="tel" name="telefone" placeholder="Telefone" />
-                <textarea name="mensagem" placeholder="Mensagem"></textarea>
-                <button type="submit">ENVIAR</button>
+      </section>
+      <section class="content-section alt">
+        <div class="page-shell support-grid">
+          <article class="support-card">
+            <span class="material-symbols-rounded">call</span>
+            <h3>Telefone</h3>
+            <p>Segunda a sexta, das 9h às 18h.</p>
+          </article>
+          <article class="support-card">
+            <span class="material-symbols-rounded">storefront</span>
+            <h3>Revenda</h3>
+            <p>Informações demonstrativas para parceiros.</p>
+          </article>
+          <article class="support-card">
+            <span class="material-symbols-rounded">inventory_2</span>
+            <h3>Fornecedores</h3>
+            <p>Apresente sua empresa e seus produtos.</p>
+          </article>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="page-shell contact-layout">
+          <div>
+            <h2 class="section-title">Fale com a NutriFit</h2>
+            <p class="section-copy">
+              Preencha os dados e descreva como podemos ajudar.
+            </p>
+          </div>
+          <section id="contato" class="panel">
+            <form class="form-stack">
+              <div class="field">
+                <label for="contact-name">Nome completo</label
+                ><input id="contact-name" name="nome" required />
+              </div>
+              <div class="field">
+                <label for="contact-cpf">CPF de teste</label
+                ><input
+                  id="contact-cpf"
+                  name="cpf"
+                  inputmode="numeric"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="contact-email">E-mail</label
+                  ><input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="contact-phone">Telefone</label
+                  ><input
+                    id="contact-phone"
+                    name="telefone"
+                    type="tel"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label for="contact-message">Mensagem</label
+                ><textarea
+                  id="contact-message"
+                  name="mensagem"
+                  required
+                ></textarea>
+              </div>
+              <button class="button" type="submit">Enviar mensagem</button>
             </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-contact">
-                <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
-                <p>Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a></p>
-            </div>
-
-            <div class="footer-shortcuts">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contato.html">Fale conosco</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-social-icons">
-                <a href="https://www.facebook.com/NutriFitOficial" target="_blank">
-                    <img src="assets/img/icon/facebook-logo.png" alt="Facebook" width="32" height="32" />
-                </a>
-                <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank">
-                    <img src="assets/img/icon/instagram.png" alt="Instagram" width="32" height="32" />
-                </a>
-            </div>
+          </section>
         </div>
-      <p>© <span data-current-year></span> NutriFit</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h2>NutriFit</h2>
+          <p>Projeto acadêmico de e-commerce.</p>
+        </div>
+        <div>
+          <h3>Navegação</h3>
+          <div class="footer-links">
+            <a href="index2.html">Início</a><a href="contato.html">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h3>Conta</h3>
+          <div class="footer-links">
+            <a href="carrinho.html">Carrinho</a><a href="login.html">Sair</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
+      </div>
     </footer>
-
-    <script src="assets/js/site.js"></script>
   </body>
-
 </html>

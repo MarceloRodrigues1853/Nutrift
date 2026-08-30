@@ -1,29 +1,88 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Entrar | NutriFit</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
-  <link rel="stylesheet" href="assets/css/login.css">
-  <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/config.js" defer></script>
-  <script src="assets/js/login.js" defer></script>
-</head>
-<body class="auth-page">
-  <header class="site-header"><nav class="site-nav"><a class="brand" href="index.html"><span class="brand-mark material-symbols-rounded">nutrition</span>NutriFit</a><div class="nav-links"><a class="nav-link" href="cadastro.html">Criar conta</a><a class="nav-link nav-cta" href="index.html">Voltar ao início</a></div></nav></header>
-  <main class="auth-main">
-    <section class="auth-intro"><span class="material-symbols-rounded">shield_lock</span><h1>Que bom ter você de volta.</h1><p>Entre com os dados cadastrados para continuar. A API publicada valida sua conta no banco TiDB Cloud.</p></section>
-    <section class="auth-card">
-      <h2>Entrar</h2><p>Use seu e-mail e sua senha para acessar.</p>
-      <form id="loginForm" class="form-grid">
-        <div class="input-box"><label for="email">E-mail</label><input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" required></div>
-        <div class="input-box"><label for="senha">Senha</label><input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required></div>
-        <div class="form-actions"><a class="text-link" href="esqueci-a-senha.html">Esqueci minha senha</a><button class="button botao" type="submit">Entrar <span class="material-symbols-rounded">login</span></button><div class="auth-switch">Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></div></div>
-      </form>
-      <div class="auth-note"><span class="material-symbols-rounded">cloud_done</span><span>Frontend na Vercel, API no Render e dados no TiDB Cloud.</span></div>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="footer-bottom">© <span data-current-year></span> NutriFit. Desenvolvido para fins acadêmicos.</div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Entrar | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/login.js" defer></script>
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
+        >
+        <div class="nav-links">
+          <a class="nav-link" href="cadastro.html">Criar conta</a
+          ><a class="nav-link nav-cta" href="index.html">Voltar ao início</a>
+        </div>
+      </nav>
+    </header>
+    <main class="auth-main">
+      <section class="auth-intro">
+        <span class="material-symbols-rounded">shield_lock</span>
+        <h1>Que bom ter você de volta.</h1>
+        <p>
+          Entre com os dados cadastrados para continuar. A API publicada valida
+          sua conta no banco TiDB Cloud.
+        </p>
+      </section>
+      <section class="auth-card">
+        <h2>Entrar</h2>
+        <p>Use seu e-mail e sua senha para acessar.</p>
+        <form id="loginForm" class="form-grid">
+          <div class="input-box">
+            <label for="email">E-mail</label
+            ><input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="voce@exemplo.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="senha">Senha</label
+            ><input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <div class="form-actions">
+            <a class="text-link" href="esqueci-a-senha.html"
+              >Esqueci minha senha</a
+            ><button class="button botao" type="submit">
+              Entrar <span class="material-symbols-rounded">login</span>
+            </button>
+            <div class="auth-switch">
+              Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a>
+            </div>
+          </div>
+        </form>
+        <div class="auth-note">
+          <span class="material-symbols-rounded">cloud_done</span
+          ><span>Frontend na Vercel, API no Render e dados no TiDB Cloud.</span>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
+      </div>
+    </footer>
+  </body>
 </html>

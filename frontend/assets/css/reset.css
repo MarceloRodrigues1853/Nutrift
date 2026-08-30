@@ -1,10 +1,10 @@
 /* Importa a fonte Raleway do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
 
 /* Define estilos para todos os elementos */
 * {
-    font-family: 'Roboto', sans-serif; 
-    box-sizing: border-box; /* Define o modelo de caixa como border-box para incluir o preenchimento e a borda no cálculo total da largura e altura */
-    margin: 0; /* Remove as margens padrão de todos os elementos */
-    padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box; /* Define o modelo de caixa como border-box para incluir o preenchimento e a borda no cálculo total da largura e altura */
+  margin: 0; /* Remove as margens padrão de todos os elementos */
+  padding: 0;
 }

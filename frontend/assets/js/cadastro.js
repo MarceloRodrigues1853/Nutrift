@@ -32,7 +32,7 @@ function validarCampo(
   inputElement,
   helperElement,
   mensagemErroMinLength,
-  mensagemErroRegex
+  mensagemErroRegex,
 ) {
   if (!regex.test(valor)) {
     estilizarInputIncorreto(inputElement, helperElement, mensagemErroRegex);
@@ -68,7 +68,7 @@ function validarNome(valor, helper) {
     nomeInput,
     helper,
     mensagemErroMinLength,
-    mensagemErroRegex
+    mensagemErroRegex,
   );
 }
 
@@ -85,7 +85,7 @@ function validarSobrenome(valor, helper) {
     sobrenomeInput,
     helper,
     mensagemErroMinLength,
-    mensagemErroRegex
+    mensagemErroRegex,
   );
 }
 
@@ -100,7 +100,7 @@ function validarEmail(valor, helper) {
     emailInput,
     helper,
     mensagemErroMinLength,
-    mensagemErroRegex
+    mensagemErroRegex,
   );
 }
 
@@ -114,7 +114,7 @@ function validarSenha(valor, helper) {
     senhaInput,
     helper,
     mensagemErroMinLength,
-    mensagemErroRegex
+    mensagemErroRegex,
   );
 }
 
@@ -125,7 +125,11 @@ function validarConfirmaSenha(valor, helper) {
     return false;
   }
   if (valor !== senhaOriginal) {
-    estilizarInputIncorreto(confirmaSenhaInput, helper, "As senhas não coincidem");
+    estilizarInputIncorreto(
+      confirmaSenhaInput,
+      helper,
+      "As senhas não coincidem",
+    );
     return false;
   }
   estilizarInputCorreto(confirmaSenhaInput, helper);
@@ -145,7 +149,7 @@ adicionarValidacaoDinamica(
   sobrenomeInput,
   sobrenomeLabel,
   sobrenomeHelper,
-  validarSobrenome
+  validarSobrenome,
 );
 
 const emailInput = document.querySelector('input[name="email"]');
@@ -159,17 +163,17 @@ const senhaHelper = document.getElementById("senha-helper");
 adicionarValidacaoDinamica(senhaInput, senhaLabel, senhaHelper, validarSenha);
 
 const confirmaSenhaInput = document.querySelector(
-  'input[name="confirmar-senha"]'
+  'input[name="confirmar-senha"]',
 );
 const confirmaSenhaLabel = document.querySelector(
-  'label[for="confirmar-senha"]'
+  'label[for="confirmar-senha"]',
 );
 const confirmaSenhaHelper = document.getElementById("confirmar-senha-helper");
 adicionarValidacaoDinamica(
   confirmaSenhaInput,
   confirmaSenhaLabel,
   confirmaSenhaHelper,
-  validarConfirmaSenha
+  validarConfirmaSenha,
 );
 
 const formCadastro = document.getElementById("form-cadastro");
@@ -200,9 +204,16 @@ formCadastro.addEventListener("submit", async (e) => {
   const diaSelecionado = document.querySelector('select[name="dia"]').value;
   const mesSelecionado = document.querySelector('select[name="mes"]').value;
   const anoSelecionado = document.querySelector('select[name="ano"]').value;
-  const generoSelecionado = document.querySelector('input[name="genero"]:checked');
+  const generoSelecionado = document.querySelector(
+    'input[name="genero"]:checked',
+  );
 
-  if (!diaSelecionado || !mesSelecionado || !anoSelecionado || !generoSelecionado) {
+  if (
+    !diaSelecionado ||
+    !mesSelecionado ||
+    !anoSelecionado ||
+    !generoSelecionado
+  ) {
     alert("Preencha a data de nascimento e selecione uma opção de gênero");
     return;
   }
@@ -210,7 +221,7 @@ formCadastro.addEventListener("submit", async (e) => {
   const dia = diaSelecionado.replace("dia-", "");
   const mes = mesSelecionado.replace("mes-", "");
   const ano = anoSelecionado.replace("ano-", "");
-  const data_nascimento = `${ano}-${mes.padStart(2, '0')}-${dia.padStart(2, '0')}`;
+  const data_nascimento = `${ano}-${mes.padStart(2, "0")}-${dia.padStart(2, "0")}`;
 
   const genero = generoSelecionado.value;
 
@@ -220,20 +231,21 @@ formCadastro.addEventListener("submit", async (e) => {
     btnSubmit.disabled = true;
     btnSubmit.textContent = "Criando conta...";
     const resposta = await fetch(`${window.NUTRIFT_API_URL}/api/register`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dados),
     });
 
     const texto = await resposta.text();
     alert(texto);
 
-    if (resposta.ok) window.location.href = 'login.html';
+    if (resposta.ok) window.location.href = "login.html";
   } catch (erro) {
-    console.error('Erro ao cadastrar:', erro);
-    alert('Erro ao cadastrar. Tente novamente.');
+    console.error("Erro ao cadastrar:", erro);
+    alert("Erro ao cadastrar. Tente novamente.");
   } finally {
     btnSubmit.disabled = false;
-    btnSubmit.innerHTML = 'Criar minha conta <span class="material-symbols-rounded">arrow_forward</span>';
+    btnSubmit.innerHTML =
+      'Criar minha conta <span class="material-symbols-rounded">arrow_forward</span>';
   }
 });

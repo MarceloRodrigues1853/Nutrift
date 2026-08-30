@@ -1,336 +1,218 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./assets/css/emagrecimento.css" />
-
-    <script src="./assets/js/emagrecimento.js" defer></script>
-
-    <title>NutriFit - Sua loja de Suplementos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Equilíbrio para uma rotina mais ativa. | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/store.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html" class="logo-link"
-          ><button class="header-button">NutriFit</button></a
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="brand" href="index2.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
         >
-      </div>
-
-      <div class="user-options">
-        <a href="#"
-          ><img
-            src="assets/img/icon/usuario.png"
-            alt="Usuário"
-            width="32"
-            height="32"
-            style="margin-right: 10px"
-        /></a>
-        <a href="carrinho.html" id="carrinho-icon">
-          <img
-            src="assets/img/icon/carrinho.png"
-            alt="Carrinho"
-            width="32"
-            height="32"
-          />
-          <span id="carrinho-quantidade">0</span>
-        </a>
-      </div>
+        <div class="nav-links">
+          <a class="nav-link" href="index2.html">Início</a
+          ><a class="nav-account" href="index2.html" aria-label="Minha conta"
+            ><span class="avatar material-symbols-rounded">person</span
+            ><span class="nav-user-label">Minha conta</span></a
+          ><a class="nav-cart" href="carrinho.html" aria-label="Carrinho"
+            ><span class="material-symbols-rounded">shopping_cart</span
+            ><span class="cart-count" id="carrinho-quantidade">0</span></a
+          >
+        </div>
+      </nav>
     </header>
-
     <main>
-      <div id="container">
-        <div class="balloon-box">
-          <div class="balloon">
-            <img
-              src="assets/img/icon/frete-free.png"
-              alt="Ícone de Frete"
-              width="64"
-              height="64"
-            />
-            <h1>Frete Grátis</h1>
-            <p>Acima de 100,00R$</p>
+      <section class="page-hero">
+        <div class="page-shell">
+          <div>
+            <span class="badge">NutriFit recomenda</span>
+            <h1>Equilíbrio para uma rotina mais ativa.</h1>
+            <p>
+              Produtos e conteúdo educativo para apoiar hábitos relacionados ao
+              controle de peso.
+            </p>
           </div>
-          <div class="balloon">
-            <img src="assets/img/icon/pix.png" alt="Pix" width="64" height="64" />
-            <h1>5% Off</h1>
-          </div>
-          <div class="balloon">
-            <img
-              src="assets/img/icon/seguro.png"
-              alt="Site Seguro"
-              width="64"
-              height="64"
-            />
-            <h1>Site Seguro</h1>
-          </div>
-          <div class="balloon">
-            <img
-              src="assets/img/icon/contato.png"
-              alt="Dúvidas"
-              width="64"
-              height="64"
-            />
-            <h1>Dúvidas?</h1>
-          </div>
+          <span class="hero-icon material-symbols-rounded">monitor_weight</span>
         </div>
-      </div>
-
-      <div id="emagrecimento">
-        <div class="div-emagrecimento">
-          <img
-            src="assets/img/icon/measuring-tape-svgrepo-com.svg"
-            alt="Emagrecimento"
-            class="img-emagrecimento"
-          />
-        </div>
-        <h1 class="titulo-prod">CONHEÇA NOSSO TERMOGÊNICO PRO FIT™</h1>
-      </div>
-
-      <!-- Seção do Produto -->
-      <section id="container-produto" class="product-section">
-        <!-- Imagem do Produto -->
-        <div class="img-prod">
-          <img
-            src="assets/img/produtos/growth-hot-removebg-preview.png"
-            alt="growth-hot"
-          />
-        </div>
-
-        <!-- Informações do Produto -->
-        <div class="cta-prod">
-          <!-- Título do Produto -->
-          <div class="dados-prod">
-            <h2>TERMOGÊNICO PROFIT™</h2>
+      </section>
+      <section class="content-section">
+        <div class="page-shell product-detail">
+          <div class="product-visual">
+            <img
+              src="assets/img/produtos/growth-hot-removebg-preview.png"
+              alt="Termogênico ProFit 60 cápsulas"
+            />
           </div>
-
-          <!-- Descrição e Benefícios do Produto -->
-          <div class="beneficios-prod">
-            <h4>
-              Desenvolvida para OTIMIZAR a TERMOGÊNESE e o CONTROLE do PESO
-            </h4>
-            <p>Em Estoque. Envio Imediato. Tamanho: 60 Comprimidos</p>
-            <ul>
-              <li>MELHOR <strong>DISPOSIÇÃO</strong> E RENDIMENTO FÍSICO</li>
-              <li>ESTIMULA A <strong>QUEIMA</strong> DE GORDURA</li>
-              <li>AUMENTA O <strong>FOCO</strong> E CONCENTRAÇÃO</li>
+          <div class="product-info">
+            <span class="badge">Em estoque • envio demonstrativo</span>
+            <h2>Termogênico ProFit 60 cápsulas</h2>
+            <ul class="feature-list">
+              <li>
+                <span class="material-symbols-rounded">check_circle</span
+                >Cafeína em composição demonstrativa
+              </li>
+              <li>
+                <span class="material-symbols-rounded">check_circle</span
+                >Embalagem com 60 cápsulas
+              </li>
+              <li>
+                <span class="material-symbols-rounded">check_circle</span>Uso
+                conforme orientação do rótulo
+              </li>
             </ul>
-          </div>
-
-          <!-- Preço do Produto -->
-          <div class="preco-produto">
-            <p class="desconto">De R$ 99,90</p>
-            <p>Promoção: R$ 59,90</p>
-          </div>
-
-          <!-- Botão de Compra -->
-          <a href="#" class="comprar" type="button">Comprar</a>
-        </div>
-      </section>
-
-      <!-- Seção Destaque -->
-      <section id="destaque" class="product-section">
-        <h2>Produtos em Destaque</h2>
-        <div id="container-destaques">
-          <!-- Adicione aqui os produtos em destaque -->
-        </div>
-      </section>
-
-      <!-- Seção Ofertas -->
-      <section id="ofertas" class="product-section">
-        <h2>Ofertas Especiais</h2>
-        <div id="container-ofertas">
-          <!-- Adicione aqui as ofertas especiais -->
-        </div>
-      </section>
-
-      <!-- Seção Lançamentos -->
-      <section id="lancamentos" class="product-section">
-        <h2>Lançamentos</h2>
-        <div id="container-lancamentos">
-          <!-- Adicione aqui os produtos lançamentos -->
-        </div>
-      </section>
-
-      <!-- Seção O que é Termogênico? | Benefícios do Termogênico | Como consumir? | Tabela nutricional -->
-      <section id="tips-section">
-        <div class="tips-card">
-          <p>O que é Termogênico?</p>
-          <button
-            type="button"
-            class="buy-button"
-            onclick="window.open('https://www.google.com/search?client=avast-a-3&q=O+que+%C3%A9+Termog%C3%AAnico%3F&oq=O+que+%C3%A9+Termog%C3%AAnico%3F&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgQIARAAMgQIAhAAMgQIAxAAMgQIBBAAMgQIBRAAMgQIBhAAMgQIBxAA0gEINDY0OWowajGoAgCwAgA&ie=UTF-8', '_blank')"
-          >
-            Saiba mais
-          </button>
-        </div>
-        <div class="tips-card">
-          <p>Benefícios do Termogênico</p>
-          <button
-            type="button"
-            class="buy-button"
-            onclick="window.open('https://www.google.com/search?client=avast-a-3&q=Benef%C3%ADcios+do+Termog%C3%AAnico&oq=Benef%C3%ADcios+do+Termog%C3%AAnico&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIECAEQADIECAIQADIECAMQADIECAQQADIECAUQADIECAYQADIECAcQANIBCDE3NDFqMGo0qAIAsAIA&ie=UTF-8', '_blank')"
-          >
-            Saiba mais
-          </button>
-        </div>
-        <div class="tips-card">
-          <p>Como consumir?</p>
-          <button
-            type="button"
-            class="buy-button"
-            onclick="window.open('https://www.google.com/search?client=avast-a-3&q=Como+consumir+Termog%C3%AAnico%3F&oq=Como+consumir+Termog%C3%AAnico%3F&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIECAEQANIBCTM5ODE1ajBqNKgCALACAA&ie=UTF-8', '_blank')"
-          >
-            Saiba mais
-          </button>
-        </div>
-        <div class="tips-card">
-          <p>Tabela nutricional</p>
-          <button
-            type="button"
-            class="buy-button"
-            onclick="window.open('https://www.google.com/search?client=avast-a-3&sca_esv=581923751&sxsrf=AM9HkKnmBbsb01n8Nd3904nI1TTenpRqsw:1699886544075&q=tabela+nutricional+growth&tbm=isch&source=univ&fir=lIAWmgp_d5_--M%252CZ-SJss_5WIt4JM%252C_%253BlETqBkN5IkkecM%252CVaGQaddIJV023M%252C_%253BZVfq7qRhV159hM%252Cgk44j4zEFjUhMM%252C_%253B68T6xPgtULK4nM%252CQgfzAEWFpQNQgM%252C_%253B8lEZ73SCBjuYBM%252Cgk44j4zEFjUhMM%252C_%253BgTt7KIz2aEMfpM%252C7_K-449t-F4nIM%252C_%253BUtVzFiwGB4ALRM%252CcMyC-vXV-s38LM%252C_%253BmMw9AQSMjF4sHM%252CtAxYZQFJ_QURJM%252C_%253BkryDsWEZ3XesYM%252Cn-g_MifQKoCsiM%252C_%253BPkw8gVRmcREmuM%252CYi54-yTNQ7B8qM%252C_%253B3sSg21-rVEZ08M%252CYd3P7bhQkWSGBM%252C_%253BzWbHp2Dl-jWREM%252C-fuqPMrTN32vaM%252C_%253B6MlRWi9_9b9iUM%252C7eKsJQ0j_3mynM%252C_%253B9J1-vmLs4R4I0M%252Cy5YcBkHElV0CCM%252C_%253BUt3coN22IFBymM%252CJFnaYeUTUkRIbM%252C_%253BdtY7CYq0HdDbuM%252CzQc32GqCu_EqrM%252C_%253Be-ecaQmzIpzNoM%252ChRB5VRozTuOplM%252C_%253B7SvhzNzUI0XydM%252CXtHyQk6q2Lw7hM%252C_&usg=AI4_-kQRx7ybi1PdGjMBbQJjkYwCOaJgbw&sa=X&ved=2ahUKEwjCr_jsmsGCAxV3rpUCHRXiBlAQjJkEegQIVxAC&biw=864&bih=609&dpr=1#imgrc=CbwzDuica_640M', '_blank')"
-          >
-            Saiba mais
-          </button>
-        </div>
-      </section>
-
-      <!-- Seção Dicas para perda de peso -->
-      <section id="dicas-perda-peso">
-        <h2>Dicas para perda de peso</h2>
-        <div class="table-container">
-          <div class="row">
-            <div class="column">
-              <h3>Exercícios aeróbicos</h3>
-              <p>• Corridas, andar de bicicleta, remo ou natação</p>
-              <p>
-                • Melhoram capacidade respiratória e aumentam o gasto calórico
-              </p>
-              <p>• No mínimo 30 minutos por dia</p>
-              <a
-                href="https://www.google.com/search?client=avast-a-3&q=exerc%C3%ADcios+aer%C3%B3bicos+exemplos&oq=Exerc%C3%ADcios+aer%C3%B3bicos&gs_lcrp=EgZjaHJvbWUqBAgBEAAyBggAEEUYOTIECAEQADIECAIQADIECAMQADIECAQQADIECAUQADIECAYQADIECAcQANIBCDgxOTVqMGoxqAIAsAIA&ie=UTF-8"
-                target="_blank"
-                ><button type="button">Conhecer</button></a
-              >
+            <div class="price-row">
+              <span class="price-old">R$ 99,90</span
+              ><span class="price-new">R$ 59,90</span>
             </div>
-            <div class="column">
-              <h3>Exercícios de musculação e crossfit</h3>
-              <p>
-                • A musculação além de ajudar a emagrecer também favorece o
-                ganho muscular.
-              </p>
-              <p>
-                • O crossfit favorece o ganho muscular através de exercícios
-                aeróbicos, diferente da musculação
-              </p>
-              <a
-                href="https://www.google.com/search?client=avast-a-3&q=Exerc%C3%ADcios+de+muscula%C3%A7%C3%A3o+e+crossfit&oq=Exerc%C3%ADcios+de+muscula%C3%A7%C3%A3o+e+crossfit&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIECAEQANIBCDM0NjJqMGoxqAIAsAIA&ie=UTF-8"
-                target="_blank"
-                ><button type="button">Conhecer</button></a
-              >
-            </div>
+            <button
+              class="button comprar"
+              type="button"
+              data-add-product
+              data-name="Termogênico ProFit 60 cápsulas"
+              data-price="59.90"
+              data-image="assets/img/produtos/growth-hot-removebg-preview.png"
+            >
+              Adicionar ao carrinho
+              <span class="material-symbols-rounded">add_shopping_cart</span>
+            </button>
           </div>
         </div>
       </section>
-
-      <!-- Seção Tabela nutricional -->
-      <section id="tabela-nutricao">
-        <h2>Tabela nutricional</h2>
-        <table>
-          <tr>
-            <td></td>
-            <td>Qtd. por porção</td>
-            <td>% VD(*)</td>
-            <td>Detalhes</td>
-          </tr>
-          <tr>
-            <td>Valor energético</td>
-            <td>2Kcal=8kJ 420mg</td>
-            <td>**</td>
-            <td>
-              <button
-                type="button"
-                onclick="window.open('https://pt.wikipedia.org/wiki/Valor_energ%C3%A9tico', '_blank')"
+      <section class="content-section alt">
+        <div class="page-shell">
+          <h2 class="section-title">Informação para uma escolha consciente</h2>
+          <p class="section-copy">
+            Suplementos complementam hábitos; não substituem alimentação
+            equilibrada nem orientação profissional.
+          </p>
+          <div class="info-grid">
+            <article class="info-card">
+              <span class="material-symbols-rounded"
+                >local_fire_department</span
               >
-                Saiba mais
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>Cafeína</td>
-            <td>420mg</td>
-            <td>*</td>
-            <td>
-              <button
-                type="button"
-                onclick="window.open('https://pt.wikipedia.org/wiki/Cafe%C3%ADna', '_blank')"
-              >
-                Saiba mais
-              </button>
-            </td>
-          </tr>
-        </table>
+              <h3>O que é termogênico?</h3>
+              <p>
+                Produto formulado para complementar uma rotina ativa,
+                frequentemente com cafeína.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="material-symbols-rounded">bolt</span>
+              <h3>Atenção a estimulantes</h3>
+              <p>
+                Pessoas sensíveis à cafeína devem buscar orientação antes do
+                consumo.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="material-symbols-rounded">nutrition</span>
+              <h3>Hábitos primeiro</h3>
+              <p>
+                Alimentação, sono e atividade física são a base de uma rotina
+                saudável.
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
-
-      <!-- Seção INGREDIENTES -->
-      <section id="ingredientes">
-        <h2>INGREDIENTES</h2>
-        <p>
-          Cafeína Anidra; Estabilizante: Fosfato de Cálcio, Celulose
-          Microcristalina (INS 460i), Croscarmelose Sódica (INS 468) e
-          Hidroxipropilmetilcelulose (INS 464); Aroma: Blend Aromático (Gengibre
-          em pó, Laranja em pó, Pimenta Cayena e Preta em pó); Antiumectante:
-          Dióxido de Silício (INS 551); Lubrificante: Estearato de Magnésio (INS
-          470i); Corante: Carbon Black; Veículo: Água Purificada, Álcool Etílico
-          e Polietilenoglicol. NÃO CONTÉM GLÚTEN.
-        </p>
-        <p>% VD(*)</p>
-        <button
-          type="button"
-          onclick="window.open('https://www.google.com/search?client=avast-a-3&sca_esv=581923751&sxsrf=AM9HkKnmBbsb01n8Nd3904nI1TTenpRqsw:1699886544075&q=tabela+nutricional+growth&tbm=isch&source=univ&fir=lIAWmgp_d5_--M%252CZ-SJss_5WIt4JM%252C_%253BlETqBkN5IkkecM%252CVaGQaddIJV023M%252C_%253BZVfq7qRhV159hM%252Cgk44j4zEFjUhMM%252C_%253B68T6xPgtULK4nM%252CQgfzAEWFpQNQgM%252C_%253B8lEZ73SCBjuYBM%252Cgk44j4zEFjUhMM%252C_%253BgTt7KIz2aEMfpM%252C7_K-449t-F4nIM%252C_%253BUtVzFiwGB4ALRM%252CcMyC-vXV-s38LM%252C_%253BmMw9AQSMjF4sHM%252CtAxYZQFJ_QURJM%252C_%253BkryDsWEZ3XesYM%252Cn-g_MifQKoCsiM%252C_%253BPkw8gVRmcREmuM%252CYi54-yTNQ7B8qM%252C_%253B3sSg21-rVEZ08M%252CYd3P7bhQkWSGBM%252C_%253BzWbHp2Dl-jWREM%252C-fuqPMrTN32vaM%252C_%253B6MlRWi9_9b9iUM%252C7eKsJQ0j_3mynM%252C_%253B9J1-vmLs4R4I0M%252Cy5YcBkHElV0CCM%252C_%253BUt3coN22IFBymM%252CJFnaYeUTUkRIbM%252C_%253BdtY7CYq0HdDbuM%252CzQc32GqCu_EqrM%252C_%253Be-ecaQmzIpzNoM%252ChRB5VRozTuOplM%252C_%253B7SvhzNzUI0XydM%252CXtHyQk6q2Lw7hM%252C_&usg=AI4_-kQRx7ybi1PdGjMBbQJjkYwCOaJgbw&sa=X&ved=2ahUKEwjCr_jsmsGCAxV3rpUCHRXiBlAQjJkEegQIVxAC&biw=864&bih=609&dpr=1#imgrc=CbwzDuica_640M', '_blank')"
-        >
-          Conhecer
-        </button>
+      <section class="content-section">
+        <div class="page-shell">
+          <h2 class="section-title">Sugestões de rotina</h2>
+          <p class="section-copy">
+            Exemplos gerais para fins educacionais. Adapte intensidade e
+            frequência com ajuda profissional.
+          </p>
+          <div class="training-grid">
+            <article class="training-card">
+              <h3>Atividade aeróbica</h3>
+              <p>
+                Caminhada, bicicleta ou natação podem ajudar a construir
+                condicionamento.
+              </p>
+            </article>
+            <article class="training-card">
+              <h3>Treino de força</h3>
+              <p>Musculação auxilia na manutenção de força e massa muscular.</p>
+            </article>
+            <article class="training-card">
+              <h3>Regularidade</h3>
+              <p>
+                Comece de forma gradual e priorize uma rotina que consiga
+                manter.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="content-section alt">
+        <div class="page-shell">
+          <h2 class="section-title">Informação nutricional demonstrativa</h2>
+          <div style="overflow-x: auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Componente</th>
+                  <th>Quantidade demonstrativa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Valor energético</td>
+                  <td>2 kcal</td>
+                </tr>
+                <tr>
+                  <td>Cafeína</td>
+                  <td>420 mg</td>
+                </tr>
+                <tr>
+                  <td>Porção</td>
+                  <td>Consulte o rótulo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
     </main>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-contact">
-          <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h2>NutriFit</h2>
           <p>
-            Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a>
+            Projeto acadêmico de e-commerce focado em uma experiência simples e
+            responsável.
           </p>
         </div>
-
-        <div class="footer-shortcuts">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Fale conosco</a></li>
-          </ul>
+        <div>
+          <h3>Navegação</h3>
+          <div class="footer-links">
+            <a href="index2.html">Início</a
+            ><a href="ganhoMuscular.html">Ganho de massa</a
+            ><a href="emagrecimento.html">Emagrecimento</a>
+          </div>
         </div>
-
-        <div class="footer-social-icons">
-          <a href="https://www.facebook.com/NutriFitOficial" target="_blank"
-            ><img
-              src="assets/img/icon/facebook-logo.png"
-              alt="Facebook"
-              width="32"
-              height="32"
-          /></a>
-          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank"
-            ><img
-              src="assets/img/icon/instagram.png"
-              alt="Instagram"
-              width="32"
-              height="32"
-          /></a>
+        <div>
+          <h3>Ajuda</h3>
+          <div class="footer-links">
+            <a href="contato.html">Fale conosco</a
+            ><a href="carrinho.html">Carrinho</a>
+          </div>
         </div>
       </div>
-      <p>© <span data-current-year></span> NutriFit</p>
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
+      </div>
     </footer>
-    <script src="assets/js/site.js"></script>
   </body>
 </html>

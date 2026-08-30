@@ -1,283 +1,223 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NutriFit - Sua loja de Suplementos</title>
-
-
-    <link rel="stylesheet" href="/assets/css/ganhoMuscular.css" />
-
-    <script src="./assets/js/ganhoMuscular.js" defer></script>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Força para evoluir com consistência. | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/store.js" defer></script>
   </head>
-
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html" class="logo-link"
-          ><button class="header-button">NutriFit</button></a
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="brand" href="index2.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
         >
-      </div>
-
-      <div class="user-options">
-        <a href="#"
-          ><img
-            src="assets/img/icon/usuario.png"
-            alt="Usuário"
-            width="32"
-            height="32"
-            style="margin-right: 10px"
-        /></a>
-
-
-        <a href="carrinho.html"
-          ><img
-            src="assets/img/icon/carrinho.png"
-            alt="Carrinho"
-            width="32"
-            height="32"
-        /></a>
-      </div>
+        <div class="nav-links">
+          <a class="nav-link" href="index2.html">Início</a
+          ><a class="nav-account" href="index2.html" aria-label="Minha conta"
+            ><span class="avatar material-symbols-rounded">person</span
+            ><span class="nav-user-label">Minha conta</span></a
+          ><a class="nav-cart" href="carrinho.html" aria-label="Carrinho"
+            ><span class="material-symbols-rounded">shopping_cart</span
+            ><span class="cart-count" id="carrinho-quantidade">0</span></a
+          >
+        </div>
+      </nav>
     </header>
-
     <main>
-      <div id="container">
-        <div class="balloon-box">
-          <div class="balloon">
-            <img
-              src="assets/img/icon/frete-free.png"
-              alt="Ícone de Frete"
-              width="64"
-              height="64"
-            />
-            <h1>Frete Grátis</h1>
-            <p>Acima de 100,00R$</p>
-          </div>
-          <div class="balloon">
-            <img src="assets/img/icon/pix.png" alt="Pix" width="64" height="64" />
-            <h1>5% Off</h1>
-          </div>
-          <div class="balloon">
-            <img
-              src="assets/img/icon/seguro.png"
-              alt="Site Seguro"
-              width="64"
-              height="64"
-            />
-            <h1>Site Seguro</h1>
-          </div>
-          <div class="balloon">
-            <img
-              src="assets/img/icon/contato.png"
-              alt="Dúvidas"
-              width="64"
-              height="64"
-            />
-            <h1>Dúvidas?</h1>
-          </div>
-        </div>
-      </div>
-
-      <div id="massa-muscular">
-        <div class="div-massa-muscular">
-          <img
-            src="assets/img/icon/biceps-of-a-man-svgrepo-com.png"
-            alt="massa-muscular"
-            class="img-massa-muscular"
-          />
-        </div>
-        <h1 class="titulo-prod">CONHEÇA NOSSO WHEY PROTEIN 100% CONCENTRADO</h1>
-      </div>
-      
-      <!-- Seção do Produto -->
-      <section id="container-produto" class="product-section">
-        <!-- Imagem do Produto -->
-        <div class="img-prod">
-          <img
-            src="assets/img/produtos/whey-gold-standard.png"
-            alt="whey-gold-standard"
-          />
-        </div>
-
-        <!-- Informações do Produto -->
-        <div class="cta-prod">
-          <!-- Título do Produto -->
-          <div class="dados-prod">
-            <h2>WHEY GOLD STANDAR</h2>
-          </div>
-
-          <!-- Descrição e Benefícios do Produto -->
-          <div class="beneficios-prod">
-            <h4>WHEY com melhor CUSTO BENEFÍCIO do MERCADO</h4>
+      <section class="page-hero">
+        <div class="page-shell">
+          <div>
+            <span class="badge">NutriFit recomenda</span>
+            <h1>Força para evoluir com consistência.</h1>
             <p>
-              <strong
-                >EM ESTOQUE. ENVIO IMEDIATO! TAMANHO: 1KG - SABOR:
-                CHOCOLATE</strong
-              >
+              Proteínas e informações para complementar sua rotina de ganho de
+              massa muscular.
             </p>
-            <ul>
-              <li>RICO EM AMINOÁCIDOS</li>
-              <li>COMBATE A INFLAMAÇÃO MUSCULAR</li>
-              <li>PREVINE CATABOLISMO WH 5!</li>
-              <li>AUXILIA MUSCULAR A REGENERAÇÃO</li>
+          </div>
+          <span class="hero-icon material-symbols-rounded">fitness_center</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="page-shell product-detail">
+          <div class="product-visual">
+            <img
+              src="assets/img/produtos/whey-gold-standard.png"
+              alt="Whey Gold Standard 1 kg"
+            />
+          </div>
+          <div class="product-info">
+            <span class="badge">Em estoque • envio demonstrativo</span>
+            <h2>Whey Gold Standard 1 kg</h2>
+            <ul class="feature-list">
+              <li>
+                <span class="material-symbols-rounded">check_circle</span>Fonte
+                prática de proteína
+              </li>
+              <li>
+                <span class="material-symbols-rounded">check_circle</span>Sabor
+                chocolate
+              </li>
+              <li>
+                <span class="material-symbols-rounded">check_circle</span
+                >Embalagem de 1 kg
+              </li>
             </ul>
-          </div>
-
-          <!-- Preço do Produto -->
-          <div class="preco-produto">
-            <p class="desconto">De R$ 159,90</p>
-            <p>Promoção: Por R$ 100,00</p>
-          </div>
-
-          <a href="#" class="comprar" type="button">Comprar</a>
-        </div>
-      </section>
-
-      <section id="tips-section">
-        <div class="tips-card">
-          <p>O que é Whey Protein?</p>
-          <button type="button" class="buy-button">
-            <a
-              href="https://www.google.com/search?q=O+que+%C3%A9+Whey+Protein%3F&client=avast-a-3&sca_esv=582023809&sxsrf=AM9HkKlWwOaKyAsgLe7OR5EwV5OjIPCMQg%3A1699908447123&ei=X4tSZaaEB9vn1sQPo4iZ8Aw&ved=0ahUKEwjmr5C57MGCAxXbs5UCHSNEBs4Q4dUDCBA&uact=5&oq=O+que+%C3%A9+Whey+Protein%3F&gs_lp=Egxnd3Mtd2l6LXNlcnAiFk8gcXVlIMOpIFdoZXkgUHJvdGVpbj8yBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESN8iUMUSWMUScAJ4AZABAJgBzgGgAc4BqgEDMi0xuAEDyAEA-AEB-AECqAIUwgIHECMY6gIYJ8ICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQHCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AEB4gMEGAAgQYgGAboGBggBEAEYCw&sclient=gws-wiz-serp"
-              target="_blank"
-              >Saiba mais</a
-            >
-          </button>
-        </div>
-        <div class="tips-card">
-          <p>Benefícios do Whey Protein</p>
-          <button type="button" class="buy-button">
-            <a
-              href="https://www.google.com/search?q=Benef%C3%ADcios+do+Whey+Protein&client=avast-a-3&sca_esv=582023809&sxsrf=AM9HkKmyXo4aGH8PXBSYZBTmjYID8oGIUw%3A1699908527286&ei=r4tSZayKEZ7e1sQPo4WbyAc&ved=0ahUKEwjsna3f7MGCAxUer5UCHaPCBnkQ4dUDCBA&uact=5&oq=Benef%C3%ADcios+do+Whey+Protein&gs_lp=Egxnd3Mtd2l6LXNlcnAiG0JlbmVmw61jaW9zIGRvIFdoZXkgUHJvdGVpbjIFEAAYgAQyBxAAGIoFGEMyBxAAGIoFGEMyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESMMjUKcaWKcacAJ4AZABAJgB6wWgAesFqgEDNi0xuAEDyAEA-AEB-AECqAIUwgIHECMYsAMYJ8ICChAAGEcY1gQYsAPCAgcQIxjqAhgnwgIWEAAYAxiPARjlAhjqAhi0AhiMA9gBAeIDBBgAIEGIBgGQBgm6BgYIARABGAs&sclient=gws-wiz-serp"
-              target="_blank"
-              >Saiba mais</a
-            >
-          </button>
-        </div>
-        <div class="tips-card">
-          <p>Como consumir?</p>
-          <button type="button" class="buy-button">
-            <a
-              href="https://www.google.com/search?q=+Whey+Protein+Como+consumir%3F&client=avast-a-3&sca_esv=582023809&sxsrf=AM9HkKnNSsAYkTg2kHT51u_tl_snlPg6Ig%3A1699908584005&ei=54tSZan-PK_c1sQPku-FyAc&ved=0ahUKEwjpjbP67MGCAxUvrpUCHZJ3AXkQ4dUDCBA&uact=5&oq=+Whey+Protein+Como+consumir%3F&gs_lp=Egxnd3Mtd2l6LXNlcnAiHCBXaGV5IFByb3RlaW4gQ29tbyBjb25zdW1pcj8yBhAAGBYYHjIIEAAYFhgeGAoyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeSLxaULMIWP0tcAF4AZABAJgBqAKgAYwFqgEFMC4yLjG4AQPIAQD4AQH4AQLCAgoQABhHGNYEGLADwgIKEAAYigUYsAMYQ8ICBRAAGIAEwgIGEAAYBxgewgIEEAAYHsICBhAAGAgYHuIDBBgAIEGIBgGQBgo&sclient=gws-wiz-serp"
-              target="_blank"
-              >Saiba mais</a
-            >
-          </button>
-        </div>
-        <div class="tips-card">
-          <p>Tabela nutricional</p>
-          <button type="button" class="buy-button">
-            <a
-              href="https://www.google.com/search?q=Whey+Protein+Como+Tabela+nutricional%3F&client=avast-a-3&sca_esv=582023809&tbm=isch&sxsrf=AM9HkKmgf0LxigmHG3wNtipdB91DRNevDg:1699908706971&source=lnms&sa=X&ved=2ahUKEwj_oIS17cGCAxXSqpUCHYZtDdAQ_AUoAnoECAEQBA&biw=1300&bih=582&dpr=1#imgrc=t5QSLjC4d-7j7M"
-              target="_blank"
-              >Saiba mais</a
-            >
-          </button>
-        </div>
-      </section>
-
-      <!-- Seção Dicas de Treinos para Ganho Muscular  -->
-      <section id="dicas-ganho-massa">
-        <h2>Dicas de Treinos para Ganho Muscular</h2>
-        <div class="table-container">
-          <div class="row">
-            <div class="column">
-              <h3>Treino ABC - Academia</h3>
-              <p>• Treino A - Pernas (segundas e quintas-feiras)</p>
-              <p>• Treino B- Empurrar (terças e sextasfeiras)</p>
-              <p>• Treino C - Puxar (quartas-feiras e sábados)</p>
-              <a
-                href="https://www.google.com/search?q=treino+iniciante+academia+abc&client=avast-a-3&sca_esv=582023809&sxsrf=AM9HkKnTiJlA8hVMrED5a93APHkLchjIaw%3A1699908375635&ei=F4tSZf6vJvXd1sQP78GPwAs&oq=Treino+ABC+-+Academia&gs_lp=Egxnd3Mtd2l6LXNlcnAiFVRyZWlubyBBQkMgLSBBY2FkZW1pYSoCCAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeSIB3UNEgWNEgcAJ4AZABAJgB0gGgAdIBqgEDMi0xuAEByAEA-AEB-AECqAIUwgIHECMY6gIYJ8ICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQHCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AEB4gMEGAAgQYgGAboGBggBEAEYCw&sclient=gws-wiz-serp#ip=1"
-                target="_blank"
-                ><button type="button">Conhecer</button></a
-              >
+            <div class="price-row">
+              <span class="price-old">R$ 159,90</span
+              ><span class="price-new">R$ 100,00</span>
             </div>
-            <div class="column">
-              <h3>Treino ABCD - Academia</h3>
-              <p>• Treino A - Peito / Costas (segunda)</p>
-              <p>• Treino B- Bíceps / Tríceps + Antebraço (terça)</p>
-              <p>• Treino C - Ombro + Trapézio + Abdômen (quinta)</p>
-              <p>• Treino D - Pernas + Panturrilhas (sexta)</p>
-              <a
-                href="https://www.google.com/search?client=avast-a-3&q=Treino+ABCD+-+Academia&oq=Treino+ABCD+-+Academia&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIECAEQADIECAIQADIECAMQADIECAQQADIECAUQADIECAYQADIECAcQANIBCDgzMTdqMGoxqAIAsAIA&ie=UTF-8"
-                target="_blank"
-                ><button type="button">Conhecer</button></a
-              >
-            </div>
+            <button
+              class="button comprar"
+              type="button"
+              data-add-product
+              data-name="Whey Gold Standard 1 kg"
+              data-price="100.00"
+              data-image="assets/img/produtos/whey-gold-standard.png"
+            >
+              Adicionar ao carrinho
+              <span class="material-symbols-rounded">add_shopping_cart</span>
+            </button>
           </div>
         </div>
       </section>
-      <section id="tabela-nutricional">
-        <h2>Tabela nutricional</h2>
-        <table>
-          <tr>
-            <td>Qtd. por porção</td>
-            <td>% VD(*)</td>
-          </tr>
-          <tr>
-            <td>Valor energético</td>
-            <td>122,4kcal = 512KJ</td>
-          </tr>
-          <tr>
-            <td>Carboidratos</td>
-            <td>4g</td>
-          </tr>
-          <tr>
-            <td>Proteínas</td>
-            <td>239g</td>
-          </tr>
-          <tr>
-            <td>Gorduras totais</td>
-            <td>1,69g</td>
-          </tr>
-          <tr>
-            <td>Gorduras saturadas</td>
-            <td>0g</td>
-          </tr>
-          <tr>
-            <td>Gorduras trans</td>
-            <td>0g</td>
-          </tr>
-        </table>
+      <section class="content-section alt">
+        <div class="page-shell">
+          <h2 class="section-title">Informação para uma escolha consciente</h2>
+          <p class="section-copy">
+            Suplementos complementam hábitos; não substituem alimentação
+            equilibrada nem orientação profissional.
+          </p>
+          <div class="info-grid">
+            <article class="info-card">
+              <span class="material-symbols-rounded">science</span>
+              <h3>O que é whey?</h3>
+              <p>
+                Proteína derivada do soro do leite, usada como complemento
+                alimentar.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="material-symbols-rounded">schedule</span>
+              <h3>Como consumir?</h3>
+              <p>
+                A quantidade e o horário dependem da alimentação e da orientação
+                profissional.
+              </p>
+            </article>
+            <article class="info-card">
+              <span class="material-symbols-rounded">health_and_safety</span>
+              <h3>Uso responsável</h3>
+              <p>
+                Verifique ingredientes, alergênicos e recomendações do
+                fabricante.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="page-shell">
+          <h2 class="section-title">Sugestões de rotina</h2>
+          <p class="section-copy">
+            Exemplos gerais para fins educacionais. Adapte intensidade e
+            frequência com ajuda profissional.
+          </p>
+          <div class="training-grid">
+            <article class="training-card">
+              <h3>Treino ABC</h3>
+              <p>
+                Alterna pernas, movimentos de empurrar e movimentos de puxar
+                durante a semana.
+              </p>
+            </article>
+            <article class="training-card">
+              <h3>Treino ABCD</h3>
+              <p>
+                Distribui peito e costas, braços, ombros e pernas em quatro
+                sessões.
+              </p>
+            </article>
+            <article class="training-card">
+              <h3>Recuperação</h3>
+              <p>
+                Sono, alimentação e intervalos adequados também fazem parte da
+                evolução.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="content-section alt">
+        <div class="page-shell">
+          <h2 class="section-title">Informação nutricional demonstrativa</h2>
+          <div style="overflow-x: auto">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Componente</th>
+                  <th>Quantidade por porção</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Valor energético</td>
+                  <td>122 kcal</td>
+                </tr>
+                <tr>
+                  <td>Carboidratos</td>
+                  <td>4 g</td>
+                </tr>
+                <tr>
+                  <td>Proteínas</td>
+                  <td>23,9 g</td>
+                </tr>
+                <tr>
+                  <td>Gorduras totais</td>
+                  <td>1,69 g</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
     </main>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-contact">
-          <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h2>NutriFit</h2>
           <p>
-            Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a>
+            Projeto acadêmico de e-commerce focado em uma experiência simples e
+            responsável.
           </p>
         </div>
-
-        <div class="footer-shortcuts">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Fale conosco</a></li>
-          </ul>
+        <div>
+          <h3>Navegação</h3>
+          <div class="footer-links">
+            <a href="index2.html">Início</a
+            ><a href="ganhoMuscular.html">Ganho de massa</a
+            ><a href="emagrecimento.html">Emagrecimento</a>
+          </div>
         </div>
-
-        <div class="footer-social-icons">
-          <a href="https://www.facebook.com/NutriFitOficial" target="_blank"
-            ><img
-              src="assets/img/icon/facebook-logo.png"
-              alt="Facebook"
-              width="32"
-              height="32"
-          /></a>
-          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank"
-            ><img
-              src="assets/img/icon/instagram.png"
-              alt="Instagram"
-              width="32"
-              height="32"
-          /></a>
+        <div>
+          <h3>Ajuda</h3>
+          <div class="footer-links">
+            <a href="contato.html">Fale conosco</a
+            ><a href="carrinho.html">Carrinho</a>
+          </div>
         </div>
       </div>
-      <p>© <span data-current-year></span> NutriFit</p>
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
+      </div>
     </footer>
-    <script src="assets/js/site.js"></script>
   </body>
 </html>

@@ -1,34 +1,158 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Criar conta | NutriFit</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
-  <link rel="stylesheet" href="assets/css/cadastro.css">
-  <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/config.js" defer></script>
-  <script src="assets/js/cadastro.js" defer></script>
-</head>
-<body class="auth-page">
-  <header class="site-header"><nav class="site-nav"><a class="brand" href="index.html"><span class="brand-mark material-symbols-rounded">nutrition</span>NutriFit</a><div class="nav-links"><a class="nav-link" href="login.html">Entrar</a><a class="nav-link nav-cta" href="index.html">Voltar ao início</a></div></nav></header>
-  <main class="auth-main">
-    <section class="auth-intro"><span class="material-symbols-rounded">person_add</span><h1>Crie sua conta.</h1><p>Cadastre-se para acessar uma experiência personalizada. Seus dados de autenticação são enviados com segurança para nossa API.</p></section>
-    <section class="auth-card">
-      <h2>Seus dados</h2><p>Preencha os campos abaixo. Os campos com * são obrigatórios.</p>
-      <form id="form-cadastro" class="form-grid">
-        <div class="input-group"><label for="nome">Nome *</label><input type="text" name="nome" id="nome" autocomplete="given-name" required><p id="nome-helper" class="helper-text"></p></div>
-        <div class="input-group"><label for="sobrenome">Sobrenome *</label><input type="text" name="sobrenome" id="sobrenome" autocomplete="family-name" required><p id="sobrenome-helper" class="helper-text"></p></div>
-        <div class="input-group full"><label for="email">E-mail *</label><input type="email" name="email" id="email" autocomplete="email" required><p id="email-helper" class="helper-text"></p></div>
-        <div class="input-group"><label for="senha">Senha *</label><input type="password" name="senha" id="senha" minlength="6" autocomplete="new-password" required><p id="senha-helper" class="helper-text"></p></div>
-        <div class="input-group"><label for="confirmar-senha">Confirmar senha *</label><input type="password" name="confirmar-senha" id="confirmar-senha" minlength="6" autocomplete="new-password" required><p id="confirmar-senha-helper" class="helper-text"></p></div>
-        <div class="input-group full"><label>Data de nascimento *</label><div class="date-selects"><select name="dia" aria-label="Dia" data-birth-day required><option value="" selected disabled>Dia</option></select><select name="mes" aria-label="Mês" data-birth-month required><option value="" selected disabled>Mês</option></select><select name="ano" aria-label="Ano" data-birth-year required><option value="" selected disabled>Ano</option></select></div></div>
-        <fieldset class="input-group full radio-group"><legend>Gênero *</legend><div class="radio-options"><label><input type="radio" name="genero" value="Masculino" required> Masculino</label><label><input type="radio" name="genero" value="Feminino"> Feminino</label><label><input type="radio" name="genero" value="Outro"> Outro</label><label><input type="radio" name="genero" value="Prefiro não informar"> Prefiro não informar</label></div></fieldset>
-        <div class="form-actions"><button class="button" type="submit">Criar minha conta <span class="material-symbols-rounded">arrow_forward</span></button><div class="auth-switch">Já tem uma conta? <a href="login.html">Entrar</a></div></div>
-      </form>
-      <div class="auth-note"><span class="material-symbols-rounded">lock</span><span>Projeto demonstrativo: nunca reutilize uma senha importante em ambientes de teste.</span></div>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="footer-bottom">© <span data-current-year></span> NutriFit. Desenvolvido para fins acadêmicos.</div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Criar conta | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/cadastro.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/cadastro.js" defer></script>
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
+        >
+        <div class="nav-links">
+          <a class="nav-link" href="login.html">Entrar</a
+          ><a class="nav-link nav-cta" href="index.html">Voltar ao início</a>
+        </div>
+      </nav>
+    </header>
+    <main class="auth-main">
+      <section class="auth-intro">
+        <span class="material-symbols-rounded">person_add</span>
+        <h1>Crie sua conta.</h1>
+        <p>
+          Cadastre-se para acessar uma experiência personalizada. Seus dados de
+          autenticação são enviados com segurança para nossa API.
+        </p>
+      </section>
+      <section class="auth-card">
+        <h2>Seus dados</h2>
+        <p>Preencha os campos abaixo. Os campos com * são obrigatórios.</p>
+        <form id="form-cadastro" class="form-grid">
+          <div class="input-group">
+            <label for="nome">Nome *</label
+            ><input
+              type="text"
+              name="nome"
+              id="nome"
+              autocomplete="given-name"
+              required
+            />
+            <p id="nome-helper" class="helper-text"></p>
+          </div>
+          <div class="input-group">
+            <label for="sobrenome">Sobrenome *</label
+            ><input
+              type="text"
+              name="sobrenome"
+              id="sobrenome"
+              autocomplete="family-name"
+              required
+            />
+            <p id="sobrenome-helper" class="helper-text"></p>
+          </div>
+          <div class="input-group full">
+            <label for="email">E-mail *</label
+            ><input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              required
+            />
+            <p id="email-helper" class="helper-text"></p>
+          </div>
+          <div class="input-group">
+            <label for="senha">Senha *</label
+            ><input
+              type="password"
+              name="senha"
+              id="senha"
+              minlength="6"
+              autocomplete="new-password"
+              required
+            />
+            <p id="senha-helper" class="helper-text"></p>
+          </div>
+          <div class="input-group">
+            <label for="confirmar-senha">Confirmar senha *</label
+            ><input
+              type="password"
+              name="confirmar-senha"
+              id="confirmar-senha"
+              minlength="6"
+              autocomplete="new-password"
+              required
+            />
+            <p id="confirmar-senha-helper" class="helper-text"></p>
+          </div>
+          <div class="input-group full">
+            <label>Data de nascimento *</label>
+            <div class="date-selects">
+              <select name="dia" aria-label="Dia" data-birth-day required>
+                <option value="" selected disabled>Dia</option></select
+              ><select name="mes" aria-label="Mês" data-birth-month required>
+                <option value="" selected disabled>Mês</option></select
+              ><select name="ano" aria-label="Ano" data-birth-year required>
+                <option value="" selected disabled>Ano</option>
+              </select>
+            </div>
+          </div>
+          <fieldset class="input-group full radio-group">
+            <legend>Gênero *</legend>
+            <div class="radio-options">
+              <label
+                ><input type="radio" name="genero" value="Masculino" required />
+                Masculino</label
+              ><label
+                ><input type="radio" name="genero" value="Feminino" />
+                Feminino</label
+              ><label
+                ><input type="radio" name="genero" value="Outro" /> Outro</label
+              ><label
+                ><input
+                  type="radio"
+                  name="genero"
+                  value="Prefiro não informar"
+                />
+                Prefiro não informar</label
+              >
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <button class="button" type="submit">
+              Criar minha conta
+              <span class="material-symbols-rounded">arrow_forward</span>
+            </button>
+            <div class="auth-switch">
+              Já tem uma conta? <a href="login.html">Entrar</a>
+            </div>
+          </div>
+        </form>
+        <div class="auth-note">
+          <span class="material-symbols-rounded">lock</span
+          ><span
+            >Projeto demonstrativo: nunca reutilize uma senha importante em
+            ambientes de teste.</span
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
+      </div>
+    </footer>
+  </body>
 </html>

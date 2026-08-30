@@ -1,109 +1,95 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrinho de Compras</title>
-
-    <link rel="stylesheet" href="./assets/css/carrinho.css" />
-
-     <script src="./assets/js/carrinho.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Carrinho | NutriFit</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+    />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/carrinho.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <button class="header-button">NutriFit</button>
-        </a>
-      </div>
-
-      <div class="user-options">
-        <a href="#">
-          <img
-            src="assets/img/icon/usuario.png"
-            alt="Usuário"
-            width="32"
-            height="32"
-          />
-       
-        <a href="#">
-          <img
-            src="assets/img/icon/carrinho.png"
-            alt="Carrinho"
-            width="32"
-            height="32"
-          />
-        </a>
-      </div>
-    </header>
-
-    <main>
-      <section class="carrinho">
-        <h1>Carrinho de Compras</h1>
-
-        <div class="produto">
-          <img src="assets/img/produtos/whey-gold-standard.png" alt="Produto" />
-          <div class="info-produto">
-            <h2>WHEY GOLD STANDARD</h2>
-            <p>Preço: R$ 99,90</p>
-            <label for="quantidade">Quantidade:</label>
-            <input
-              type="number"
-              id="quantidade"
-              name="quantidade"
-              value="1"
-              min="1"
-            />
-            <button class="remover">Remover do Carrinho</button>
-          </div>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="index2.html"
+          ><span class="brand-mark material-symbols-rounded">nutrition</span
+          >NutriFit</a
+        >
+        <div class="nav-links">
+          <a class="nav-link" href="index2.html">Início</a
+          ><a class="nav-account" href="index2.html"
+            ><span class="avatar material-symbols-rounded">person</span
+            ><span class="nav-user-label">Minha conta</span></a
+          ><a class="nav-cart" href="carrinho.html"
+            ><span class="material-symbols-rounded">shopping_cart</span
+            ><span class="cart-count" id="carrinho-quantidade">0</span></a
+          >
         </div>
-
-        <!-- Adicione mais produtos conforme necessário -->
-
-        <div class="total">
-          <p>Total: R$ 99,90</p>
-          <button class="finalizar-compra">Finalizar Compra</button>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="page-shell">
+          <div>
+            <span class="badge">Sua seleção</span>
+            <h1>Carrinho de compras</h1>
+            <p>Revise os itens e as quantidades antes de continuar.</p>
+          </div>
+          <span class="hero-icon material-symbols-rounded">shopping_bag</span>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="page-shell checkout-layout">
+          <section class="panel" aria-labelledby="cart-title">
+            <h2 id="cart-title" class="section-title">Itens</h2>
+            <div id="carrinho-container"></div>
+          </section>
+          <aside class="panel summary">
+            <h2>Resumo</h2>
+            <div class="summary-row">
+              <span>Subtotal</span><strong id="subtotal">R$ 0,00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Frete</span><span>Calculado na próxima etapa</span>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Total</span><strong id="total-carrinho">R$ 0,00</strong>
+            </div>
+            <button class="button finalizar-compra" type="button">
+              Continuar para pagamento
+            </button>
+          </aside>
         </div>
       </section>
     </main>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-contact">
-          <p>Atendimento <a href="tel:(xx)xxxx-xxxx">(xx) xxxx-xxxx</a></p>
-          <p>
-            Email <a href="mailto:email@exemplo.com">NutriFit@comercial.com</a>
-          </p>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h2>NutriFit</h2>
+          <p>Projeto acadêmico de e-commerce.</p>
         </div>
-
-        <div class="footer-shortcuts">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contato.html">Fale conosco</a></li>
-          </ul>
+        <div>
+          <h3>Navegação</h3>
+          <div class="footer-links">
+            <a href="index2.html">Início</a><a href="contato.html">Contato</a>
+          </div>
         </div>
-
-        <div class="footer-social-icons">
-          <a href="https://www.facebook.com/NutriFitOficial" target="_blank">
-            <img
-              src="assets/img/icon/facebook-logo.png"
-              alt="Facebook"
-              width="32"
-              height="32"
-            />
-          </a>
-          <a href="https://www.instagram.com/nutrifit.oficial/" target="_blank">
-            <img
-              src="assets/img/icon/instagram.png"
-              alt="Instagram"
-              width="32"
-              height="32"
-            />
-          </a>
+        <div>
+          <h3>Conta</h3>
+          <div class="footer-links">
+            <a href="carrinho.html">Carrinho</a><a href="login.html">Sair</a>
+          </div>
         </div>
       </div>
-      <p>© <span data-current-year></span> NutriFit</p>
+      <div class="footer-bottom">
+        © <span data-current-year></span> NutriFit. Desenvolvido para fins
+        acadêmicos.
+      </div>
     </footer>
-    <script src="assets/js/site.js"></script>
   </body>
 </html>
