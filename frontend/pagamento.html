@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pagamento | NutriFit</title>
+    <title>Pagamento e entrega | NutriFit</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
@@ -37,81 +37,230 @@
         <div class="page-shell">
           <div>
             <span class="badge">Checkout demonstrativo</span>
-            <h1>Finalize seu pedido.</h1>
+            <h1>Pagamento e entrega.</h1>
             <p>
-              Esta tela não realiza cobranças reais. Não informe dados
-              verdadeiros de cartão.
+              Simule uma compra completa escolhendo o método de pagamento e uma
+              opção de frete. Nenhuma cobrança ou envio real será realizado.
             </p>
           </div>
-          <span class="hero-icon material-symbols-rounded">credit_card</span>
+          <span class="hero-icon material-symbols-rounded">local_shipping</span>
         </div>
       </section>
       <section class="content-section">
         <div class="page-shell checkout-layout">
-          <form id="payment-form" class="panel form-stack">
-            <h2 class="section-title">Dados do pagamento</h2>
-            <div class="notice">
-              <span class="material-symbols-rounded">warning</span>Use somente
-              dados fictícios neste projeto acadêmico.
-            </div>
-            <div class="field">
-              <label for="numero-cartao">Número do cartão</label
-              ><input
-                id="numero-cartao"
-                inputmode="numeric"
-                placeholder="0000 0000 0000 0000"
-                required
-              />
-            </div>
-            <div class="field">
-              <label for="nome-titular">Nome do titular</label
-              ><input id="nome-titular" autocomplete="off" required />
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="data-expiracao">Validade</label
-                ><input id="data-expiracao" placeholder="MM/AA" required />
+          <form id="payment-form" class="form-stack">
+            <section class="panel form-stack">
+              <div class="step-heading">
+                <span>1</span>
+                <div>
+                  <h2>Método de pagamento</h2>
+                  <p>Os campos mudam conforme a opção escolhida.</p>
+                </div>
+              </div>
+              <div class="payment-methods payment-method-grid">
+                <label class="payment-option"
+                  ><input
+                    type="radio"
+                    name="metodo-pagamento"
+                    value="cartao"
+                    checked
+                  /><span class="material-symbols-rounded">credit_card</span
+                  ><span
+                    ><strong>Cartão</strong
+                    ><small>Preencha dados fictícios</small></span
+                  ></label
+                >
+                <label class="payment-option"
+                  ><input
+                    type="radio"
+                    name="metodo-pagamento"
+                    value="pix"
+                  /><span class="material-symbols-rounded">qr_code_2</span
+                  ><span
+                    ><strong>Pix</strong
+                    ><small>Aprovação simulada imediata</small></span
+                  ></label
+                >
+                <label class="payment-option"
+                  ><input
+                    type="radio"
+                    name="metodo-pagamento"
+                    value="boleto"
+                  /><span class="material-symbols-rounded">barcode</span
+                  ><span
+                    ><strong>Boleto</strong
+                    ><small>Vencimento em 3 dias</small></span
+                  ></label
+                >
+              </div>
+              <div class="payment-panel" data-payment-panel="cartao">
+                <div class="notice">
+                  <span class="material-symbols-rounded">warning</span>Use
+                  somente dados fictícios. Estes dados não são enviados nem
+                  armazenados.
+                </div>
+                <div class="field">
+                  <label for="numero-cartao">Número do cartão</label
+                  ><input
+                    id="numero-cartao"
+                    data-card-field
+                    inputmode="numeric"
+                    maxlength="19"
+                    placeholder="0000 0000 0000 0000"
+                  />
+                </div>
+                <div class="field">
+                  <label for="nome-titular">Nome do titular</label
+                  ><input
+                    id="nome-titular"
+                    data-card-field
+                    autocomplete="off"
+                    placeholder="NOME DE TESTE"
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="data-expiracao">Validade</label
+                    ><input
+                      id="data-expiracao"
+                      data-card-field
+                      maxlength="5"
+                      placeholder="MM/AA"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="cvv">CVV</label
+                    ><input
+                      id="cvv"
+                      data-card-field
+                      inputmode="numeric"
+                      maxlength="3"
+                      placeholder="000"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="payment-panel" data-payment-panel="pix" hidden>
+                <div class="method-preview">
+                  <span class="method-preview-icon material-symbols-rounded"
+                    >qr_code_2</span
+                  >
+                  <div>
+                    <h3>Pix demonstrativo</h3>
+                    <p>
+                      Ao finalizar, exibiremos uma confirmação simulada. Nenhuma
+                      chave ou QR Code bancário real será gerado.
+                    </p>
+                    <code>NUTRIFIT-DEMO-PIX</code>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-panel" data-payment-panel="boleto" hidden>
+                <div class="method-preview">
+                  <span class="method-preview-icon material-symbols-rounded"
+                    >barcode</span
+                  >
+                  <div>
+                    <h3>Boleto demonstrativo</h3>
+                    <p>
+                      Vencimento simulado em 3 dias úteis. Nenhum documento
+                      bancário real será emitido.
+                    </p>
+                    <code
+                      >34191.79001 01043.510047 91020.150008 9
+                      00000000000000</code
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="panel form-stack">
+              <div class="step-heading">
+                <span>2</span>
+                <div>
+                  <h2>Endereço de entrega</h2>
+                  <p>Preencha dados fictícios para demonstrar o fluxo.</p>
+                </div>
               </div>
               <div class="field">
-                <label for="cvv">CVV</label
-                ><input
-                  id="cvv"
-                  inputmode="numeric"
-                  placeholder="000"
-                  required
-                />
-              </div>
-            </div>
-            <h3>Endereço de entrega</h3>
-            <div class="field">
-              <label for="endereco">Endereço</label
-              ><input id="endereco" required />
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="cidade">Cidade</label><input id="cidade" required />
+                <label for="destinatario">Nome do destinatário</label
+                ><input id="destinatario" required />
               </div>
               <div class="field">
-                <label for="estado">Estado</label><input id="estado" required />
+                <label for="endereco">Endereço e número</label
+                ><input id="endereco" required />
               </div>
-            </div>
-            <div class="field">
-              <label for="cp">CEP</label><input id="cp" required />
-            </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="cidade">Cidade</label
+                  ><input id="cidade" required />
+                </div>
+                <div class="field">
+                  <label for="estado">Estado</label
+                  ><select id="estado" required>
+                    <option value="">Selecione</option>
+                    <option>SP</option>
+                    <option>RJ</option>
+                    <option>MG</option>
+                    <option>PR</option>
+                    <option>RS</option>
+                    <option>SC</option>
+                    <option>BA</option>
+                    <option>PE</option>
+                    <option>GO</option>
+                    <option>DF</option>
+                    <option>Outro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="cep">CEP</label>
+                <div class="field-action">
+                  <input
+                    id="cep"
+                    inputmode="numeric"
+                    maxlength="9"
+                    placeholder="00000-000"
+                    required
+                  /><button
+                    class="button button-secondary"
+                    id="calcular-frete"
+                    type="button"
+                  >
+                    Calcular frete
+                  </button>
+                </div>
+              </div>
+              <div
+                id="shipping-options"
+                class="shipping-options"
+                aria-live="polite"
+              >
+                <div class="shipping-placeholder">
+                  <span class="material-symbols-rounded">package_2</span>Informe
+                  um CEP para simular prazo e valor.
+                </div>
+              </div>
+            </section>
           </form>
           <aside class="panel summary">
-            <h2>Resumo</h2>
+            <h2>Resumo do pedido</h2>
             <div class="summary-row">
-              <span>Pedido demonstrativo</span
-              ><strong id="payment-total">R$ 0,00</strong>
+              <span>Produtos</span
+              ><strong id="subtotal-pagamento">R$ 0,00</strong>
             </div>
-            <h3>Método</h3>
-            <div class="payment-methods">
-              <label class="payment-option"
-                ><input type="radio" name="metodo-pagamento" checked /> Cartão
-                de crédito</label
-              ><label class="payment-option"
-                ><input type="radio" name="metodo-pagamento" /> Pix</label
+            <div class="summary-row">
+              <span>Frete</span><strong id="shipping-price">A calcular</strong>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Total</span><strong id="payment-total">R$ 0,00</strong>
+            </div>
+            <div class="selected-method">
+              <span class="material-symbols-rounded" id="selected-method-icon"
+                >credit_card</span
+              ><span
+                >Pagamento por
+                <strong id="selected-method-label">cartão</strong></span
               >
             </div>
             <button
@@ -120,8 +269,11 @@
               type="submit"
               form="payment-form"
             >
-              Simular pagamento
+              Simular compra
             </button>
+            <a class="text-link back-link" href="carrinho.html"
+              >Voltar ao carrinho</a
+            >
           </aside>
         </div>
       </section>
